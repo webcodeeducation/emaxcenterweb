@@ -17,10 +17,11 @@
           <li><a href="contact.php">Contact</a></li>
           <li class="drop-down"><a href="">Usefull Links</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/index.php">Student Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/center/index.php">Center Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/studentverification.php">Student Verification</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/getcertificate.php">Student Certificate</a></li>
+              <li><a href="https://emaxindia.in/exampanel/center/index.php">Center Login</a></li>
             </ul>
           </li>
         </ul>

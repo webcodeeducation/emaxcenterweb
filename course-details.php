@@ -1,3 +1,5 @@
+<?php error_reporting(0); ?>
+<?php include 'secret.php';?>
 <!DOCTYPE php>
 <php lang="en">
 

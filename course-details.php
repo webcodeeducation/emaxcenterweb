@@ -1,3 +1,16 @@
+<?php
+include 'secret.php';
+include '../connection/config.php';
+
+$sql = 'select * from center_websites_data where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+$data = mysqli_fetch_assoc($result);
+$map = $data['google_map'];
+$address = $data['address'];
+$email = $data['email'];
+$phone = $data['phone'];
+
+?>
 <!DOCTYPE php>
 <php lang="en">
 

@@ -1,6 +1,6 @@
 <?php
 include 'secret.php';
-include 'inc/config.php';
+include '../connection/config.php';
 
 $sql = 'select * from center_websites_data where centerid=CENTERID';
 $result = mysqli_query($conn,$sql);
@@ -15,7 +15,7 @@ $data = mysqli_fetch_assoc($result);
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Trainers - Mentor Bootstrap Template</title>
+  <title>Trainers</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

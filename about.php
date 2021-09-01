@@ -1,5 +1,15 @@
-<?php error_reporting(0); ?>
-<?php include 'secret.php';?>
+<?php
+include 'secret.php';
+include 'inc/config.php';
+
+$sql = 'select * from center_websites_data where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+$data = mysqli_fetch_assoc($result);
+$sliders = $data['sliders'];
+$students = $data['student_photos'];
+$sliders_data = explode(",",$sliders);
+$students_data = explode(",",$students);
+?>
 <!DOCTYPE php>
 <php lang="en">
 
@@ -7,9 +17,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About - Mentor Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>About - <?=$data['center_name']?></title>
+   <meta name="robots" content="index, follow"/>
+<meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
+        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -40,7 +51,7 @@
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>About Us</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p><?=$data['about_heading_txt']?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -53,20 +64,10 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <!--h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3-->
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              <?=$data['about_data_main']?>
             </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
-
           </div>
         </div>
 
@@ -79,25 +80,17 @@
 
         <div class="row counters">
 
+    <?php
+$sql = 'select * from center_website_dynamic_fields where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+while($row=mysqli_fetch_assoc($result)){
+?>
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1232</span>
-            <p>Students</p>
+            <span data-toggle="counter-up"><?=$row['field_value']?></span>
+            <p><?=$row['field_name']?></p>
           </div>
+          <?php } ?>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">64</span>
-            <p>Courses</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">42</span>
-            <p>Events</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Trainers</p>
-          </div>
 
         </div>
 

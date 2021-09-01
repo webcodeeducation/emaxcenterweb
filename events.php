@@ -1,5 +1,12 @@
-<?php error_reporting(0); ?>
-<?php include 'secret.php';?>
+<?php
+include 'secret.php';
+include 'inc/config.php';
+
+$sql = 'select * from center_websites_data where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+$data = mysqli_fetch_assoc($result);
+$top_txt = $data['event_top_txt'];
+?>
 <!DOCTYPE php>
 <php lang="en">
 
@@ -7,9 +14,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Events - Emax India Education</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Events - <?=$data['center_name']?></title>
+  <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
+        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">

@@ -1,5 +1,15 @@
-<?php error_reporting(0); ?>
-<?php include 'secret.php';?>
+<?php
+include 'secret.php';
+include 'connection/config.php';
+
+$sql = 'select * from center_websites_data where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+$data = mysqli_fetch_assoc($result);
+$sliders = $data['sliders'];
+$students = $data['student_photos'];
+$sliders_data = explode(",",$sliders);
+$students_data = explode(",",$students);
+?>
 <!DOCTYPE php>
 <php lang="en">
 
@@ -7,9 +17,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Emax Education India</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title><?=$data['center_name']?></title>
+  <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
+        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -53,14 +64,13 @@
   <h2>Slider with all components</h2>
   <div class="slider-box" id="sb_1" data-auto-slide="true" data-speed="5000">
     <div class="slider-content">
-      <div class="slider-item" data-background-url="assets/images/slider2.jpg">
+      <?php foreach($sliders_data as $slider){?>
+      <div class="slider-item" data-background-url="assets/images/<?=$slider?>">
         <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h2>We are team of talented trainers to teach best in India</h2>
       </div>
-      <div class="slider-item" data-background-url="assets/images/slider3.jpg">
-        <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      </div>
+      <?php } ?>
+
     </div>
     <div class="slider-pagin"></div>
     <div class="slider-fillbar"></div>
@@ -87,8 +97,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              <?=$data['about_heading_txt']?>
             </p>
             <ul>
               <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -111,26 +120,16 @@
 
         <div class="row counters">
 
+<?php
+$sql = 'select * from center_website_dynamic_fields where centerid=CENTERID';
+$result = mysqli_query($conn,$sql);
+while($row=mysqli_fetch_assoc($result)){
+?>
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1232</span>
-            <p>Students</p>
+            <span data-toggle="counter-up"><?=$row['field_value']?></span>
+            <p><?=$row['field_name']?></p>
           </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">64</span>
-            <p>Courses</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">42</span>
-            <p>Events</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">15</span>
-            <p>Trainers</p>
-          </div>
-
+<?php } ?>
         </div>
 
       </div>
@@ -145,8 +144,7 @@
             <div class="content">
               <h3>Why Choose Mentor?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                <?=$data['about_heading_txt']?>
               </p>
               <div class="text-center">
                 <a href="about.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -194,12 +192,10 @@
 	<div class="row align-items-center">
 		<div class="col-12 col-carousel">
 			<div class="owl-carousel carousel-main">
-				<div><img src="assets/students/photo_1.jpg?text=1"></div>
-				<div><img src="assets/students/photo_2.jpg?text=1"></div>
-				<div><img src="assets/students/photo_3.jpg?text=1"></div>
-				<div><img src="assets/students/photo_4.jpg?text=1"></div>
-				<div><img src="assets/students/photo_5.jpg?text=1"></div>
-				<div><img src="assets/students/photo_6.jpg?text=1"></div>
+			    <?php
+			    foreach($students_data as $stdn){ ?>
+				<div><img src="assets/students/<?=$stdn?>?text=1"></div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -218,83 +214,30 @@
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
+
+    <?php
+$sql = 'select * from center_websites_courses where cid=CENTERID';
+$result = mysqli_query($conn,$sql);
+while($row=mysqli_fetch_assoc($result)){
+?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
               <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
+                  <h4><?=$row['title']?></h4>
                 </div>
 
-                <h3><a href="course-details.php">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
-                  </div>
-                </div>
+                <h3><a href="course-details.php?id=<?=$row['id']?>"><?=$row['title']?></a></h3>
+                <p><?=$row['detaiils']?>.</p>
               </div>
             </div>
           </div> <!-- End Course Item-->
+          <?php } ?>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
-                </div>
+          
 
-                <h3><a href="course-details.php">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-                    <span>Lana</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.php">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                    <span>Brandon</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
+          
 
         </div>
 
@@ -311,62 +254,29 @@
         </div>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          
+          <?php
+$sql = 'select * from center_websites_trainers where cid=CENTERID';
+$result = mysqli_query($conn,$sql);
+while($row=mysqli_fetch_assoc($result)){
+?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
+                <h4><?=$row['name']?></h4>
+                <span><?=$row['title']?></span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  <?=$row['course_name']?>
                 </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div>
+          <?php } ?>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
-                <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-              <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
-                <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 

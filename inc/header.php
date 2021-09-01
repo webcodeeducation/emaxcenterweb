@@ -13,7 +13,6 @@
           <li><a href="courses.php">Courses</a></li>
           <li><a href="trainers.php">Trainers</a></li>
           <li><a href="events.php">Events</a></li>
-          <li><a href="pricing.php">Pricing</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li class="drop-down"><a href="">Usefull Links</a>
             <ul>
@@ -27,7 +26,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="courses.php" class="get-started-btn">Online Admission</a>
+      <a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>=" class="get-started-btn" target="_blank">Online Admission</a>
 
     </div>
   </header><!-- End Header -->

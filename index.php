@@ -1,6 +1,6 @@
 <?php
 include 'secret.php';
-include 'connection/config.php';
+include '../connection/config.php';
 
 $sql = 'select * from center_websites_data where centerid=CENTERID';
 $result = mysqli_query($conn,$sql);

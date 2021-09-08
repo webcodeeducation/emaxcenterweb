@@ -39,6 +39,12 @@ $top_txt = $data['course_page_top_txt'];
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- =======================================================
+  * Template Name: Mentor - v2.2.1
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -70,7 +76,7 @@ while($row=mysqli_fetch_assoc($result)){
           
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="<?=$row['title']?>">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>

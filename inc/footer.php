@@ -54,7 +54,7 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Emax Education</span></strong>. All Rights Reserved <?=CENTERCODE?>
+          &copy; Copyright <strong><span>Emax Education</span></strong>. All Rights Reserved <?=CENTERID?>
         </div>
         <div class="credits">
           Designed by <a href="https://emaxindia.in/">Emax Education</a>

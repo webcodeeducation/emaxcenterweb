@@ -37,6 +37,13 @@ $data = mysqli_fetch_assoc($result);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor - v2.2.1
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -67,7 +74,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/trainers/<?=$row['photo']?>" class="img-fluid" alt="">
+              <img src="assets/trainers/<?=$row['photo']?>" width="200px" height="200px" class="img-fluid" alt="">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>

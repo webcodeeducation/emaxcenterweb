@@ -5,6 +5,9 @@ include '../connection/config.php';
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
+$center_name = $data['center_name'];
+$top_txt = $data['contact_main_top_txt'];
+$address = $data['address'];
 $map = $data['google_map'];
 $address = $data['address'];
 $email = $data['email'];
@@ -18,7 +21,7 @@ $phone = $data['phone'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Emax Education India</title>
+  <title><?=$center_name?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,6 +43,7 @@ $phone = $data['phone'];
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,7 +56,7 @@ $phone = $data['phone'];
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p><?=$top_txt?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 

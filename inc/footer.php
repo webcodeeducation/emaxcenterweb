@@ -8,8 +8,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3><?=$center_name?></h3>
             <p>
-              Address 1 <br>
-              Address 3 <br><br>
+              <?=$address?><br><br>
               <strong>Phone:</strong> <?=$data['phone']?><br>
               <strong>Email:</strong> <?=$data['email']?><br>
             </p>

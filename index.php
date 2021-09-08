@@ -194,9 +194,9 @@ while($row=mysqli_fetch_assoc($result)){
 			<div class="owl-carousel carousel-main">
 			    <?php
 			    foreach($students_data as $stdn){
-			    if($stdn != ','){
+			    if($stdn != ''){
 			    ?>
-				<div><img src="assets/students/<?=$stdn?>"></div>
+				<div><img src="assets/students/<?=$stdn?>" width="250px" height="250px"></div>
 				<?php } } ?>
 			</div>
 		</div>

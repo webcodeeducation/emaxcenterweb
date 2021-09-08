@@ -6,13 +6,12 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Center Name</h3>
+            <h3><?=$wdata['center_name']?></h3>
             <p>
               Address 1 <br>
-              Address<br>
               Address 3 <br><br>
-              <strong>Phone:</strong> 123456789.<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> <?=$wdata['phone']?><br>
+              <strong>Email:</strong> <?=$wdata['email']?><br>
             </p>
           </div>
 

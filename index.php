@@ -7,6 +7,7 @@ $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 //print_r($data);
 $center_name = $data['center_name'];
+$address = $data['address'];
 //die();
 $sliders = $data['sliders'];
 $students = $data['student_photos'];
@@ -227,7 +228,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="Center Trainer">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="Center Trainer" width="400px" height="400px">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>
@@ -267,7 +268,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/trainers/<?=$row['photo']?>" class="img-fluid" alt="">
+              <img src="assets/trainers/<?=$row['photo']?>" class="img-fluid" alt="" width="250px" height="250px">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>

@@ -2,7 +2,7 @@
 include 'secret.php';
 include '../connection/config.php';
 
-$sql = 'select * from center_websites_data where centerid=CENTERID';
+$sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 $sliders = $data['sliders'];
@@ -121,7 +121,7 @@ $students_data = explode(",",$students);
         <div class="row counters">
 
 <?php
-$sql = 'select * from center_website_dynamic_fields where centerid=CENTERID';
+$sql = 'select * from center_website_dynamic_fields where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -216,7 +216,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 
     <?php
-$sql = 'select * from center_websites_courses where cid=CENTERID';
+$sql = 'select * from center_websites_courses where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -256,7 +256,7 @@ while($row=mysqli_fetch_assoc($result)){
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           
           <?php
-$sql = 'select * from center_websites_trainers where cid=CENTERID';
+$sql = 'select * from center_websites_trainers where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>

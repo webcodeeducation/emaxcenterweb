@@ -222,14 +222,14 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>
                 </div>
 
                 <h3><a href="course-details.php?id=<?=$row['id']?>"><?=$row['title']?></a></h3>
-                <p><?=$row['detaiils']?>.</p>
+                <p><?=$row['detaiils']?></p>
               </div>
             </div>
           </div> <!-- End Course Item-->

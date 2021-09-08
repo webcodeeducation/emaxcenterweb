@@ -2,7 +2,7 @@
 include 'secret.php';
 include '../connection/config.php';
 
-$sql = 'select * from center_websites_data where centerid=CENTERID';
+$sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 $top_txt = $data['course_page_top_txt'];
@@ -69,7 +69,7 @@ $top_txt = $data['course_page_top_txt'];
 
           
           <?php
-$sql = 'select * from center_websites_courses where cid=CENTERID';
+$sql = 'select * from center_websites_courses where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>

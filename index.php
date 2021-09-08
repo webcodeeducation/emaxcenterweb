@@ -65,7 +65,7 @@ $students_data = explode(",",$students);
   <div class="slider-box" id="sb_1" data-auto-slide="true" data-speed="5000">
     <div class="slider-content">
       <?php foreach($sliders_data as $slider){?>
-      <div class="slider-item" data-background-url="assets/images/<?=$slider?>">
+      <div class="slider-item" data-background-url="assets/sliders/<?=$slider?>">
         <h1>Learning Today,<br>Leading Tomorrow</h1>
       <h2>We are team of talented trainers to teach best in India</h2>
       </div>

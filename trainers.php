@@ -6,6 +6,13 @@ $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 
+$new_sql = 'select * from center where c_id='. CENTERID;
+$result_new = mysqli_query($conn, $new_sql);
+$cdata = mysqli_fetch_assoc($result_new);
+//print_r($cdata);
+//die();
+$center_name = $cdata['centername'];
+$code = $cdata['centercode'];
 
 ?>
 <!DOCTYPE php>

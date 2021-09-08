@@ -16,11 +16,11 @@
           <li><a href="contact.php">Contact</a></li>
           <li class="drop-down"><a href="">Usefull Links</a>
             <ul>
-              <li><a href="https://emaxindia.in/exampanel/student/index.php">Student Login</a></li>
-              <li><a href="https://emaxindia.in/exampanel/center/index.php">Center Login</a></li>
-              <li><a href="https://emaxindia.in/exampanel/student/studentverification.php">Student Verification</a></li>
-              <li><a href="https://emaxindia.in/exampanel/student/getcertificate.php">Student Certificate</a></li>
-              <li><a href="https://emaxindia.in/exampanel/center/index.php">Center Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/index.php" target="_blank">Student Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/center/index.php" target="_blank">Center Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/studentverification.php" target="_blank">Student Verification</a></li>
+              <li><a href="https://emaxindia.in/exampanel/student/getcertificate.php" target="_blank">Student Certificate</a></li>
+              <li><a href="https://emaxindia.in/exampanel/center/index.php" target="_blank">Center Login</a></li>
             </ul>
           </li>
         </ul>

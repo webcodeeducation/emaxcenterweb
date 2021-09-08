@@ -193,9 +193,11 @@ while($row=mysqli_fetch_assoc($result)){
 		<div class="col-12 col-carousel">
 			<div class="owl-carousel carousel-main">
 			    <?php
-			    foreach($students_data as $stdn){ ?>
-				<div><img src="assets/students/<?=$stdn?>?text=1"></div>
-				<?php } ?>
+			    foreach($students_data as $stdn){
+			    if($stdn != ','){
+			    ?>
+				<div><img src="assets/students/<?=$stdn?>"></div>
+				<?php } } ?>
 			</div>
 		</div>
 	</div>
@@ -216,13 +218,13 @@ while($row=mysqli_fetch_assoc($result)){
 
 
     <?php
-$sql = 'select * from center_websites_courses where cid='.CENTERID;
+echo $sql = 'select * from center_websites_courses where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="...">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="Center Trainer">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>
@@ -262,7 +264,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <img src="assets/trainers/<?=$row['photo']?>" class="img-fluid" alt="">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>

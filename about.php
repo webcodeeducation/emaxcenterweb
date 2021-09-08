@@ -5,6 +5,8 @@ include '../connection/config.php';
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
+$center_name = $data['center_name'];
+$address = $data['address'];
 $sliders = $data['sliders'];
 $students = $data['student_photos'];
 $sliders_data = explode(",",$sliders);

@@ -5,7 +5,14 @@ include '../connection/config.php';
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
-$top_txt = $data['event_top_txt'];
+$top_txt = $data['event_top_text'];
+
+$new_sql = 'select * from center where c_id='. CENTERID;
+$result_new = mysqli_query($conn, $new_sql);
+$cdata = mysqli_fetch_assoc($result_new);
+$center_name = $cdata['centername'];
+$code = $cdata['centercode'];
+
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -14,10 +21,10 @@ $top_txt = $data['event_top_txt'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Events - <?=$data['center_name']?></title>
+  <title>Events - <?=$center_name?></title>
   <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
-        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+        <meta name="keywords" content="Best Education Institute in <?=$center_name?>"/>
+        <meta name="description" content="Top Institute in India <?=$center_name?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -49,7 +56,7 @@ $top_txt = $data['event_top_txt'];
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Events</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p><?=$top_txt?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -58,31 +65,27 @@ $top_txt = $data['event_top_txt'];
       <div class="container" data-aos="fade-up">
 
         <div class="row">
+          
+          <?php
+            $event_sql = 'select * from center_webiste_events where cid='. CENTERID;
+            $result_new = mysqli_query($conn, $event_sql);
+            while($row = mysqli_fetch_assoc($result_new)){
+          ?>
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/events-1.jpg" alt="...">
+                <img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
-                <p class="font-italic text-center">Sunday, September 26th at 7:00 pm</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <h5 class="card-title"><a href=""><?=$row['title']?></a></h5>
+                <p class="font-italic text-center"><?=$row['event_date']?></p>
+                <p class="card-text"><?=$row['details']?></p>
               </div>
             </div>
           </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/events-2.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
-                <p class="font-italic text-center">Sunday, November 15th at 7:00 pm</p>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-              </div>
-            </div>
-
-          </div>
+          <?php } ?>
+          
+          
         </div>
 
       </div>

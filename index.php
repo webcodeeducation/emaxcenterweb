@@ -218,7 +218,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 
     <?php
-echo $sql = 'select * from center_websites_courses where cid='.CENTERID;
+$sql = 'select * from center_websites_courses where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>

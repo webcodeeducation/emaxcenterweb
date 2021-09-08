@@ -74,7 +74,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/trainers/<?=$row['photo']?>" class="img-fluid" alt="">
+              <img src="assets/trainers/<?=$row['photo']?>" class="img-fluid" alt="">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>

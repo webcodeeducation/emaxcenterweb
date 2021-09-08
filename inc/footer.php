@@ -6,9 +6,10 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3><?=$data['center_name']?></h3>
+            <h3><?=$center_name?></h3>
             <p>
-              <?=$data['address']?><br>
+              Address 1 <br>
+              Address 3 <br><br>
               <strong>Phone:</strong> <?=$data['phone']?><br>
               <strong>Email:</strong> <?=$data['email']?><br>
             </p>
@@ -54,7 +55,7 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Emax Education</span></strong>. All Rights Reserved <?=CENTERID?>
+          &copy; Copyright <strong><span>Emax Education</span></strong>. All Rights Reserved <b>Code</b>: <?=$code?>
         </div>
         <div class="credits">
           Designed by <a href="https://emaxindia.in/">Emax Education</a>

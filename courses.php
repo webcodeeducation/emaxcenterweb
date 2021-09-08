@@ -57,7 +57,7 @@ $top_txt = $data['course_page_top_txt'];
     <div class="breadcrumbs">
       <div class="container">
         <h2>Courses</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p><?=$top_txt?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -76,7 +76,7 @@ while($row=mysqli_fetch_assoc($result)){
           
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="<?=$row['title']?>">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="<?=$row['title']?>" width="400px">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>

@@ -201,7 +201,7 @@ while($row=mysqli_fetch_assoc($result)){
 			<div class="owl-carousel carousel-main">
 			    <?php
 			    while($row=mysqli_fetch_assoc($result_students)){
-			    if($row['student_id'] != ''){
+			    if($row['studentlogo'] != ''){
 			    ?>
 				<div><img src="../../exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px"></div>
 				<?php } } ?>

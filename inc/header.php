@@ -22,6 +22,7 @@
               <li><a href="https://emaxindia.in/exampanel/student/studentverification.php" target="_blank">Student Verification</a></li>
               <li><a href="https://emaxindia.in/exampanel/student/getcertificate.php" target="_blank">Student Certificate</a></li>
               <li><a href="https://emaxindia.in/exampanel/center/index.php" target="_blank">Center Login</a></li>
+              <li><a href="https://emaxindia.in/exampanel/user-center/login.php" target="_blank">Center Login</a></li>
             </ul>
           </li>
         </ul>

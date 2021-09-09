@@ -75,7 +75,7 @@ $code = $cdata['centercode'];
           
           
           <?php
-$sql = 'select * from center_websites_trainers where cid='.CENTERID;
+$sql = 'select * from center_webiste_gallery where cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>

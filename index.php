@@ -12,7 +12,10 @@ $address = $data['address'];
 $sliders = $data['sliders'];
 $students = $data['student_photos'];
 $sliders_data = explode(",",$sliders);
-$students_data = explode(",",$students);
+//$students_data = explode(",",$students);
+$student_sql = 'SELECT * FROM student where center_id = "'.CENTERID.'" ORDER by student_id DESC LIMIT 20';
+$result_students = mysqli_query($conn,$student_sql);
+//die();
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -197,10 +200,10 @@ while($row=mysqli_fetch_assoc($result)){
 		<div class="col-12 col-carousel">
 			<div class="owl-carousel carousel-main">
 			    <?php
-			    foreach($students_data as $stdn){
-			    if($stdn != ''){
+			    while($row=mysqli_fetch_assoc($result_students)){
+			    if($row['student_id'] != ''){
 			    ?>
-				<div><img src="assets/students/<?=$stdn?>" width="250px" height="250px"></div>
+				<div><img src="../../exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px"></div>
 				<?php } } ?>
 			</div>
 		</div>

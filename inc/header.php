@@ -13,6 +13,7 @@
           <li><a href="courses.php">Courses</a></li>
           <li><a href="trainers.php">Trainers</a></li>
           <li><a href="events.php">Events</a></li>
+          <li><a href="gallery.php">Gallery</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li class="drop-down"><a href="">Usefull Links</a>
             <ul>

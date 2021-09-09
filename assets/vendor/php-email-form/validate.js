@@ -130,6 +130,7 @@
       data: data,
       timeout: 40000
     }).done( function(msg){
+        $('#contactform')[0].reset();
       if (msg.trim() == 'OK') {
         this_form.find('.loading').slideUp();
         this_form.find('.sent-message').slideDown();

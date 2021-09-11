@@ -1,8 +1,8 @@
 /**
-* Template Name: Mentor - v2.2.1
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Template Name: Emax India - v2.2.1
+* Template URL: https://emaxindia.in/
+* Author: Rajesh Kumar
+* License: https://emaxindia.in/license/
 */
 
 /*--------------------------------------------------------------
@@ -1708,4 +1708,7 @@ section {
   background: #3ac162;
   color: #fff;
   text-decoration: none;
+}
+.container h2 {
+    margin-top: 100px;
 }

@@ -22,7 +22,7 @@ $code = $cdata['centercode'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Trainers</title>
+  <title>Gallery</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -57,7 +57,7 @@ $code = $cdata['centercode'];
     <div class="breadcrumbs">
       <div class="container">
         <h2>Gallery</h2>
-        <p>Gallery Data Here.</p>
+        <p><?=$data['gallery_top_txt']?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -69,13 +69,13 @@ $code = $cdata['centercode'];
           
           
           <?php
-$sql = 'select * from center_webiste_gallery where cid='.CENTERID;
+$sql = 'select * from center_webiste_gallery where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/trainers/<?=$row['photo']?>" width="200px" height="200px" class="img-fluid" alt="">
+              <img src="assets/images/<?=$row['photo']?>" width="200px" height="200px" class="img-fluid" alt="">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>
@@ -115,5 +115,5 @@ while($row=mysqli_fetch_assoc($result)){
   <script src="assets/js/main.js"></script>
 
 </body>
-
+</html>
 </php>

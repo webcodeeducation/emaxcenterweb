@@ -63,7 +63,7 @@ $top_txt = $data['course_page_top_txt'];
 
           
           <?php
-$sql = 'select * from center_websites_courses where cid='.CENTERID;
+$sql = 'select * from center_websites_courses where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -110,5 +110,5 @@ while($row=mysqli_fetch_assoc($result)){
   <script src="assets/js/main.js"></script>
 
 </body>
-
+</html>
 </php>

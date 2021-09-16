@@ -5,6 +5,7 @@ include '../connection/config.php';
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
+$address = $data['address'];
 $top_txt = $data['event_top_text'];
 
 $new_sql = 'select * from center where c_id='. CENTERID;
@@ -67,7 +68,7 @@ $code = $cdata['centercode'];
         <div class="row">
           
           <?php
-            $event_sql = 'select * from center_webiste_events where cid='. CENTERID;
+            $event_sql = 'select * from center_webiste_events where isactive=1 && cid='. CENTERID;
             $result_new = mysqli_query($conn, $event_sql);
             while($row = mysqli_fetch_assoc($result_new)){
           ?>
@@ -109,5 +110,5 @@ $code = $cdata['centercode'];
   <script src="assets/js/main.js"></script>
 
 </body>
-
+</html>
 </php>

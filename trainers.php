@@ -13,7 +13,6 @@ $cdata = mysqli_fetch_assoc($result_new);
 //die();
 $center_name = $cdata['centername'];
 $code = $cdata['centercode'];
-
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -44,7 +43,6 @@ $code = $cdata['centercode'];
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -57,7 +55,7 @@ $code = $cdata['centercode'];
     <div class="breadcrumbs">
       <div class="container">
         <h2>Trainers</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p><?=$data['trainer_top_txt']?></p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -69,7 +67,7 @@ $code = $cdata['centercode'];
           
           
           <?php
-$sql = 'select * from center_websites_trainers where cid='.CENTERID;
+$sql = 'select * from center_websites_trainers where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -115,5 +113,5 @@ while($row=mysqli_fetch_assoc($result)){
   <script src="assets/js/main.js"></script>
 
 </body>
-
+</html>
 </php>

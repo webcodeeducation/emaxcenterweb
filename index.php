@@ -68,13 +68,16 @@ $result_students = mysqli_query($conn,$student_sql);
 
   <section id="hero">
   	<div class="box">
-  <h2>Slider with all components</h2>
+  <marquee><?=$data['center_marquee_txt']?></marquee>
   <div class="slider-box" id="sb_1" data-auto-slide="true" data-speed="5000">
     <div class="slider-content">
-      <?php foreach($sliders_data as $slider){?>
-      <div class="slider-item" data-background-url="assets/sliders/<?=$slider?>">
-        <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented trainers to teach best in India</h2>
+      <?php 
+      $ssql = 'select * from center_websites_sliders where isactive = 1 && cid="'.CENTERID.'"';
+      $result = mysqli_query($conn, $ssql);
+      while($row = mysqli_fetch_assoc($result)){?>
+      <div class="slider-item" data-background-url="assets/images/<?php echo $row['slider'];?>">
+        <h1><?=$row['slider_data']?></h1>
+      <h2><?=$row['slider_data_2']?></h2>
       </div>
       <?php } ?>
 
@@ -83,7 +86,9 @@ $result_students = mysqli_query($conn,$student_sql);
     <div class="slider-fillbar"></div>
     <div class="slider-background"></div>
   </div>
+  
 </div>
+<marquee><?=$data['center_marquee_txt2']?></marquee>
   </section>
 
   <main id="main">
@@ -102,7 +107,7 @@ $result_students = mysqli_query($conn,$student_sql);
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <!--h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3-->
             <p class="font-italic">
               <?=$data['about_heading_txt']?>
             </p>
@@ -128,7 +133,7 @@ $result_students = mysqli_query($conn,$student_sql);
         <div class="row counters">
 
 <?php
-$sql = 'select * from center_website_dynamic_fields where centerid='.CENTERID;
+$sql = 'select * from center_website_dynamic_fields where isactive=1 && centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -149,7 +154,7 @@ while($row=mysqli_fetch_assoc($result)){
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Why Choose Mentor?</h3>
+              <h3>Why Choose <?=$data['center_name']?>?</h3>
               <p>
                 <?=$data['about_heading_txt']?>
               </p>
@@ -164,22 +169,22 @@ while($row=mysqli_fetch_assoc($result)){
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4><?=$data['heading_1_txt']?></h4>
+                    <p><?=$data['data_1_txt']?></p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4><?=$data['heading_2_txt']?></h4>
+                    <p><?=$data['data_2_txt']?></p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4><?=$data['heading_3_txt']?></h4>
+                    <p><?=$data['data_3_txt']?></p>
                   </div>
                 </div>
               </div>
@@ -225,7 +230,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 
     <?php
-$sql = 'select * from center_websites_courses where cid='.CENTERID;
+$sql = 'select * from center_websites_courses where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -265,7 +270,7 @@ while($row=mysqli_fetch_assoc($result)){
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           
           <?php
-$sql = 'select * from center_websites_trainers where cid='.CENTERID;
+$sql = 'select * from center_websites_trainers where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
@@ -435,5 +440,6 @@ $('.carousel-main').owlCarousel({
   </script>
 
 </body>
+</html>
 
 </php>

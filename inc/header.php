@@ -2,9 +2,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php"><?=$data['center_name']?></a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><?=$data['center_name']?></a><strong><?=$data['center_name2']?></strong></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>

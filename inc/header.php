@@ -1,6 +1,26 @@
+<div class="headtoppart bg-white clearfix">
+				    	<div class="headerwp clearfix">
+
+				    		<!-- Infotmation -->
+				     		<div class="headertopleft">			     			
+				        		<div class="header-info clearfix">
+				        			<span class="txt-400"><i class="fas fa-map-marker-alt"></i><?=$data['address']?></span> 
+				            	</div>
+				     		</div>
+
+				     		<!-- Contacts -->
+						    <div class="headertopright header-contacts">						    	
+						    	<a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?><i class="fas fa-phone"></i></a>
+						    	<a href="tel:+<?=$data['phone']?>" class="callusbtn b-right txt-400"><?=$data['phone']?><i class="fas fa-phone"></i></a>
+						    	<a href="mailto:<?=$data['email']?>" class="txt-400"><i class="far fa-envelope-open"></i><?=$data['email']?></a>
+					      	</div>
+
+					    </div>
+				  	</div>  
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
+
 
       <h1 class="logo mr-auto"><a href="index.php"><?=$data['center_name']?></a><strong><?=$data['center_name2']?></strong></h1>
       <!-- Uncomment below if you prefer to use an image logo -->

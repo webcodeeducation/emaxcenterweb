@@ -5,17 +5,17 @@ include '../connection/config.php';
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
-//print_r($data);
 $center_name = $data['center_name'];
 $address = $data['address'];
-//die();
 $sliders = $data['sliders'];
 $students = $data['student_photos'];
 $sliders_data = explode(",",$sliders);
-//$students_data = explode(",",$students);
 $student_sql = 'SELECT * FROM student where center_id = "'.CENTERID.'" ORDER by student_id DESC LIMIT 20';
 $result_students = mysqli_query($conn,$student_sql);
-//die();
+$sql = 'select * from center where c_id='.CENTERID;
+$result7 = mysqli_query($conn, $sql);
+$data7 = mysqli_fetch_assoc($result7);
+$code = $data7['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -23,7 +23,7 @@ $result_students = mysqli_query($conn,$student_sql);
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title><?=$data['center_name']?></title>
   <meta name="robots" content="index, follow"/>
         <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
@@ -47,7 +47,7 @@ $result_students = mysqli_query($conn,$student_sql);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <style>
 
   </style>
@@ -57,18 +57,10 @@ $result_students = mysqli_query($conn,$student_sql);
 
 <?php include 'inc/header.php';?>
 
-  <!-- ======= Hero Section ======= -->
-  <!--section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="courses.php" class="btn-get-started">Get Started</a>
-    </div>
-  </section--><!-- End Hero -->
-
   <section id="hero">
+      <marquee id="top"><?=$data['center_marquee_txt']?></marquee>
   	<div class="box">
-  <marquee><?=$data['center_marquee_txt']?></marquee>
+  
   <div class="slider-box" id="sb_1" data-auto-slide="true" data-speed="5000">
     <div class="slider-content">
       <?php 
@@ -76,8 +68,8 @@ $result_students = mysqli_query($conn,$student_sql);
       $result = mysqli_query($conn, $ssql);
       while($row = mysqli_fetch_assoc($result)){?>
       <div class="slider-item" data-background-url="assets/images/<?php echo $row['slider'];?>">
-        <h1><?=$row['slider_data']?></h1>
-      <h2><?=$row['slider_data_2']?></h2>
+        <h1 style="color:<?=$row['slider_data_color']?>"><?=$row['slider_data']?></h1>
+      <h2 style="color:<?=$row['slider_data_2_color']?>"><?=$row['slider_data_2']?></h2>
       </div>
       <?php } ?>
 
@@ -88,9 +80,8 @@ $result_students = mysqli_query($conn,$student_sql);
   </div>
   
 </div>
-<marquee><?=$data['center_marquee_txt2']?></marquee>
+<marquee id="bottom"><?=$data['center_marquee_txt2']?></marquee>
   </section>
-
   <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -104,7 +95,7 @@ $result_students = mysqli_query($conn,$student_sql);
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/images/<?=$data['home_about_photo']?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <!--h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3-->
@@ -166,27 +157,22 @@ while($row=mysqli_fetch_assoc($result)){
           <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
+                <?php
+                $hsql = 'SELECT * FROM center_websites_headings where cid='.CENTERID;
+                $resulth = mysqli_query($conn, $hsql);
+                while($rowh=mysqli_fetch_assoc($resulth)){
+                ?>
+                
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4><?=$data['heading_1_txt']?></h4>
-                    <p><?=$data['data_1_txt']?></p>
+                    <h4><?=$rowh['heading_name']?></h4>
+                    <p><?=$rowh['heading_txt']?></p>
                   </div>
                 </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>
-                    <h4><?=$data['heading_2_txt']?></h4>
-                    <p><?=$data['data_2_txt']?></p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>
-                    <h4><?=$data['heading_3_txt']?></h4>
-                    <p><?=$data['data_3_txt']?></p>
-                  </div>
-                </div>
+                <?php } ?>
+                
+                
               </div>
             </div><!-- End .content-->
           </div>
@@ -236,7 +222,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="Center Trainer" width="400px" height="400px">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="Center Courses">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>
@@ -440,6 +426,5 @@ $('.carousel-main').owlCarousel({
   </script>
 
 </body>
-</html>
 
 </php>

@@ -1,6 +1,6 @@
 <?php
-include 'secret.php';
-include '../connection/config.php';
+include '../secret.php';
+include '../../connection/config.php';
 
 $sql = 'select * from center where c_id='.CENTERID;
 $result = mysqli_query($conn,$sql);
@@ -43,6 +43,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
  
 // Additional headers 
 $headers .= 'From: '.$fromName.'<'.$from.'>' . "\r\n"; 
+$headers .= 'Cc: info@emaxindia.in' . "\r\n"; 
 $headers .= 'Bcc: payment@emaxindia.in' . "\r\n"; 
 // Send email 
 if(mail($to, $subject, $htmlContent, $headers)){ 
@@ -50,4 +51,5 @@ if(mail($to, $subject, $htmlContent, $headers)){
 }else{ 
    echo 'Email sending failed.'; 
 }
+header('Location: ../index.php');
 ?>

@@ -12,7 +12,10 @@ $map = $data['google_map'];
 $address = $data['address'];
 $email = $data['email'];
 $phone = $data['phone'];
-
+$sql = 'select * from center where c_id='.CENTERID;
+$result7 = mysqli_query($conn, $sql);
+$data7 = mysqli_fetch_assoc($result7);
+$code = $data7['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -20,7 +23,7 @@ $phone = $data['phone'];
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title><?=$center_name?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -43,7 +46,7 @@ $phone = $data['phone'];
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>

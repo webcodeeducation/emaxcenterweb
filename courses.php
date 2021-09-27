@@ -6,7 +6,10 @@ $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 $top_txt = $data['course_page_top_txt'];
-
+$sql = 'select * from center where c_id='.CENTERID;
+$result7 = mysqli_query($conn, $sql);
+$data7 = mysqli_fetch_assoc($result7);
+$code = $data7['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -14,7 +17,7 @@ $top_txt = $data['course_page_top_txt'];
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Courses - <?=$data['center_name']?></title>
 <meta name="robots" content="index, follow"/>
         <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
@@ -38,7 +41,7 @@ $top_txt = $data['course_page_top_txt'];
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -70,7 +73,7 @@ while($row=mysqli_fetch_assoc($result)){
           
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid" alt="<?=$row['title']?>" width="400px">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="<?=$row['title']?>" width="400px">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?=$row['title']?></h4>
@@ -110,5 +113,5 @@ while($row=mysqli_fetch_assoc($result)){
   <script src="assets/js/main.js"></script>
 
 </body>
-</html>
+
 </php>

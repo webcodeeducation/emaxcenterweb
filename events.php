@@ -12,8 +12,7 @@ $new_sql = 'select * from center where c_id='. CENTERID;
 $result_new = mysqli_query($conn, $new_sql);
 $cdata = mysqli_fetch_assoc($result_new);
 $center_name = $cdata['centername'];
-$code = $cdata['centercode'];
-
+$code = $cdata['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -21,7 +20,7 @@ $code = $cdata['centercode'];
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Events - <?=$center_name?></title>
   <meta name="robots" content="index, follow"/>
         <meta name="keywords" content="Best Education Institute in <?=$center_name?>"/>
@@ -45,6 +44,7 @@ $code = $cdata['centercode'];
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>

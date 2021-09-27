@@ -11,6 +11,10 @@ $sliders = $data['sliders'];
 $students = $data['student_photos'];
 $sliders_data = explode(",",$sliders);
 $students_data = explode(",",$students);
+$sql = 'select * from center where c_id='.CENTERID;
+$result7 = mysqli_query($conn, $sql);
+$data7 = mysqli_fetch_assoc($result7);
+$code = $data7['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -18,7 +22,7 @@ $students_data = explode(",",$students);
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
@@ -42,6 +46,7 @@ $students_data = explode(",",$students);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -58,15 +63,14 @@ $students_data = explode(",",$students);
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about aboutp">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <!--h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3-->
             <p class="font-italic">
               <?=$data['about_data_main']?>
             </p>

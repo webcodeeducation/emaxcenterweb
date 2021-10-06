@@ -6,7 +6,11 @@ $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 $center_name = $data['center_name'];
-$privacy_policy = $data['privacy_policy'];
+$address = $data['address'];
+$sliders = $data['sliders'];
+$students = $data['student_photos'];
+$sliders_data = explode(",",$sliders);
+$students_data = explode(",",$students);
 $sql = 'select * from center where c_id='.CENTERID;
 $result7 = mysqli_query($conn, $sql);
 $data7 = mysqli_fetch_assoc($result7);
@@ -53,8 +57,8 @@ $code = $data7['branchcode'];
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>About Us</h2>
-        <p><?=$data['about_heading_txt']?></p>
+        <h2>Privacy & Policy</h2>
+        <p>We have following Privacy & Policy as given below.</p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -63,15 +67,14 @@ $code = $data7['branchcode'];
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <p class="font-italic">
-              <?=$data['privacy_policy']?>
-            </p>
+          <div class="col-lg-12 order-1 order-lg-2" >
+            <?=$data['policy_data']?>
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
+
 
 
     

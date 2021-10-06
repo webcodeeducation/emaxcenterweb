@@ -63,7 +63,7 @@ $code = $data7['branchcode'];
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about aboutp">
+    <section id="policy" class="policy policyp">
       <div class="container" data-aos="fade-up">
 
         <div class="row">

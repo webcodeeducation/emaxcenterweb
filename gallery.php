@@ -43,6 +43,47 @@ $code = $cdata['branchcode'];
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+      <!--Popup Lightbox CSS-->
+      <link href="assets/css/popup-lightbox.css" rel="stylesheet" />
+      
+      <style>
+      /**{ margin: 0; padding: 0;}
+      body { background-color: #fafafa; }
+      .container { margin: 150px auto; max-width: 960px; text-align: center; }*/
+      .img-container {
+  margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-container img {
+   width: 200px;
+   height: auto;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   cursor: pointer;
+   -webkit-tap-highlight-color: transparent;
+   transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+
+}
+.img-container img:hover{
+  transform: scale(0.97);
+ -webkit-transform: scale(0.97);
+ -moz-transform: scale(0.97);
+ -o-transform: scale(0.97);
+  opacity: 0.75;
+ -webkit-opacity: 0.75;
+ -moz-opacity: 0.75;
+  transition: .3s;
+ -webkit-transition: .3s;
+ -moz-transition: .3s;
+}
+</style>
 </head>
 
 <body>
@@ -65,15 +106,17 @@ $code = $cdata['branchcode'];
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           
-          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="img-container">
           <?php
 $sql = 'select * from center_webiste_gallery where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
 ?>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" />
+          <!--div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/images/<?=$row['photo']?>" width="200px" height="200px" class="img-fluid" alt="">
+              <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="">
               <div class="member-content">
                 <h4><?=$row['name']?></h4>
                 <span><?=$row['title']?></span>
@@ -82,9 +125,10 @@ while($row=mysqli_fetch_assoc($result)){
                 </p>
               </div>
             </div>
-          </div>
+          </div-->
           <?php } ?>
-
+</div>
+</div>
          
          
 
@@ -111,7 +155,27 @@ while($row=mysqli_fetch_assoc($result)){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.popup.lightbox.js"></script>
+      <script>
+         $(document).ready(function(){
 
+         $(".img-container").popupLightbox({
+          width: 600,
+      height: 450
+         });
+
+
+         });
+      </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88401913-1');
+</script>
 </body>
 
 </php>

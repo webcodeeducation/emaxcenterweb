@@ -68,7 +68,7 @@ $code = $data7['branchcode'];
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid" alt="">
+            <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid aboutimg" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <p class="font-italic">
@@ -169,3 +169,4 @@ while($row=mysqli_fetch_assoc($result)){
 </body>
 
 </php>
+</html>

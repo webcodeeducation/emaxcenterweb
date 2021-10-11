@@ -115,15 +115,15 @@ $code = $data7['branchcode'];
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="loading" style="display:none;">Loading</div>
+                <div class="error-message" style="display:none;"></div>
+                <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="button" class="btn btn-success btnSendMail">Send Message</button></div>
             </form>
 
           </div>
@@ -152,5 +152,3 @@ $code = $data7['branchcode'];
 
 </body>
 </html>
-
-</php>

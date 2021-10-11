@@ -60,8 +60,8 @@ $code = $cdata['branchcode'];
 }
 
 .img-container img {
-   width: 200px;
-   height: auto;
+   width: 250px;
+   height: 250px;
    border: 1px solid #ccc;
    border-radius: 5px;
    cursor: pointer;
@@ -167,15 +167,6 @@ while($row=mysqli_fetch_assoc($result)){
 
          });
       </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-88401913-1');
-</script>
 </body>
 
-</php>
+</html>

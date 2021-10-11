@@ -109,4 +109,4 @@ $course_data = mysqli_fetch_assoc($resultc);
 
 </body>
 
-</php>
+</html>

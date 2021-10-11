@@ -102,14 +102,7 @@ $code = $data7['branchcode'];
             <p class="font-italic">
               <?=$data['about_heading_txt']?>
             </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
+           
             <a href="about.php" class="learn-more-btn">Learn More</a>
           </div>
         </div>
@@ -126,11 +119,11 @@ $code = $data7['branchcode'];
 <?php
 $sql = 'select * from center_website_dynamic_fields where isactive=1 && centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
-while($row=mysqli_fetch_assoc($result)){
+while($rowf=mysqli_fetch_assoc($result)){
 ?>
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up"><?=$row['field_value']?></span>
-            <p><?=$row['field_name']?></p>
+            <span data-toggle="counter-up"><?=$rowf['field_value']?></span>
+            <p><?=$rowf['field_name']?></p>
           </div>
 <?php } ?>
         </div>
@@ -185,7 +178,7 @@ while($row=mysqli_fetch_assoc($result)){
     <section id="features" class="features">
       <div class="container">
       	<div class="section-title">
-          <p>Students</p>
+          <p>Recently Joined Students</p>
         </div>
 	<div class="row align-items-center">
 		<div class="col-12 col-carousel">
@@ -424,7 +417,15 @@ $('.carousel-main').owlCarousel({
 	navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
 });
   </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-88401913-1');
+</script>
 </body>
 
-</php>
+</html>

@@ -10,6 +10,8 @@ $sql = 'select * from center where c_id='.CENTERID;
 $result7 = mysqli_query($conn, $sql);
 $data7 = mysqli_fetch_assoc($result7);
 $code = $data7['branchcode'];
+
+
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -69,6 +71,9 @@ $code = $data7['branchcode'];
 $sql = 'select * from center_websites_courses where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 while($row=mysqli_fetch_assoc($result)){
+
+
+
 ?>
           
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
@@ -80,9 +85,13 @@ while($row=mysqli_fetch_assoc($result)){
                 </div>
 
                 <h3><a href="course-details.php?id=<?=$row['id']?>"><?=$row['title']?></a></h3>
-                <p><?=$row['details']?></p>
+                <a href="course-details.php?id=<?=$row['id']?>" class="show_hide123">Read More</a>
+                <!--div class="content"><p><?=$row['details']?></p></div-->
+                
                 
               </div>
+              
+            
             </div>
           </div> <!-- End Course Item-->
         <?php } ?>
@@ -111,7 +120,25 @@ while($row=mysqli_fetch_assoc($result)){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<!--script>
+    $(document).ready(function () {
+    $(".content").hide();
+    $(".show_hide").on("click", function () {
+        var txt = $(".content").is(':visible') ? 'Read More' : 'Read Less';
+        $(".show_hide").text(txt);
+        $(this).next('.content').slideToggle(200);
+    });
+});
+</script-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-88401913-1');
+</script>
 </body>
 
-</php>
+</html>

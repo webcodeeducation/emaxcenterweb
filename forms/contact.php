@@ -31,7 +31,7 @@ $htmlContent = '
                 <th>Subject:</th><td>'.$subject.'</td> 
             </tr>
             <tr> 
-                <th>Comment:</th><td>'.$comments.'</td> 
+                <th>Message:</th><td>'.$comments.'</td> 
             </tr> 
         </table> 
     </body> 
@@ -44,12 +44,12 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 // Additional headers 
 $headers .= 'From: '.$fromName.'<'.$from.'>' . "\r\n"; 
 $headers .= 'Cc: info@emaxindia.in' . "\r\n"; 
-$headers .= 'Bcc: payment@emaxindia.in' . "\r\n"; 
+$headers .= 'Bcc: payment@emaxindia.in' . "\r\n";
 // Send email 
 if(mail($to, $subject, $htmlContent, $headers)){ 
-    echo 'Email has sent successfully.'; 
+    echo 'Your message has been sent. Thank you!'; 
 }else{ 
-   echo 'Email sending failed.'; 
+   echo 'Email sending failed.';
 }
-header('Location: ../index.php');
+
 ?>

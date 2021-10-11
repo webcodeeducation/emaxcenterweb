@@ -1,8 +1,8 @@
 /**
-* Template Name: Mentor - v2.2.1
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Template Name: Emax - v2.2.1
+* Template URL: https://emaxindia.in/
+* Author: Emaxindia.in
+* License: https://emaxindia.in/license/
 */
 !(function($) {
   "use strict";
@@ -144,5 +144,40 @@
       once: true
     });
   });
+
+$(document).on('click', '.btnSendMail', function(){
+    var name = $('#name').val();
+	var email = $('#email').val();
+	var subject = $('#subject').val();
+	var message = $('#message').val();
+	
+	if($('#name').val() == '' || $('#name') == ' ' || $('#email').val() == '' || $('#email').val() == ' ' || $('#subject').val() == '' || $('#subject').val() == ' ' || $('#message').val() == '' || $('#message').val() == ' '){
+		alert('Please fill all values');
+	}else{
+		$.ajax({
+			url: 'forms/contact.php',
+			type: 'POST',
+			data: {'name': name,'email':email,'subject':subject, 'message': message},
+			before: function(){
+				$('.loading').show('fast');
+			},
+			success: function(response)
+			{
+			    $('.sent-message').show('fast');
+				//console.log(response);
+			},
+			error: function(error){
+				console.log(error);
+			},
+		before: function(){
+				
+			}
+			
+		});	
+		
+	
+	}
+});
+
 
 })(jQuery);

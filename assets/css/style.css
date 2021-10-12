@@ -246,9 +246,9 @@ i.fa.fa-phone,i.fa.fa-envelope {
 }
 #header .logo img {
 min-height: 86px;
-    position: absolute;
-    left: 2px;
-    top: -7px;
+    position: absolute !important;
+    left: 28px !important;
+    top: 65px !important;
 }
 img.img-fluid1 {
 position: relative;
@@ -793,7 +793,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .section-title h2 {
@@ -1380,22 +1380,32 @@ margin-left: 50px;
     top: 69px;
     width: 100px;
 }
-img.img-fluid1 {
-    position: relative;
-    top: -68px;
-    left: -218px;
-    width: 96px;
-    height: auto;
-    /* float: left; */
-    /* text-align: right; */
-    /* padding-right: 15px; */
+#site-detail {
+    position: absolute;
+    left: 200px;
+    top: 46px;
 }
-  img.img-fluid1 {
+img.img-fluid1 {
+    position: relative !important;
+    top: -4px !important;
+    left: -90px !important;
+    width: 96px !important;
+    height: auto !important;
+    float: left !important;
+    text-align: right !important;
+    padding-right: 15px !important;
+}
+/*img.img-fluid1 {
     position: relative;
     top: -68px;
     left: -218px;
     width: 78px;
     height: auto;
+}*/
+.nav-menu.d-none.d-lg-block {
+    float: right;
+    margin-right: 80px;
+    margin-top: 59px;
 }
 #site-title {
     /*margin-left: 60px !important;*/

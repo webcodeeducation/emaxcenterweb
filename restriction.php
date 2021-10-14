@@ -205,9 +205,9 @@ The rotateX/Y reversal is easy since it's not animated, so just use its opposite
 </style>
   </head>
   <body>
-<div class="txt1">Website SUSPENDED</div>
+<div class="txt1">WEBSITE SUSPENDED</div>
 <div class="txt2">This website has been suspended.</div>
-<div class="logo"><img src="https://emaxindia.in/exampanel/images/logo/defaultlogo/your-logo.png" width="400px"></div>
+<div class="logo"><img src="https://emaxindia.in/exampanel/images/logo/defaultlogo/your-logo.png" width="350px"></div>
 <div id="orbit-system">
   <div class="system">
     <div class="satellite-orbit">

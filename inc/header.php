@@ -1,40 +1,45 @@
+<?php
+$url = $_SERVER['REQUEST_URI'];
+?>
 <div class="headtoppart bg-white clearfix">
 				    	<div class="headerwp clearfix">
-
-				    		<!-- Infotmation -->
+				    	    <div class="topbar">
 				     		<div class="headertopleft">			     			
 				        		<div class="header-info clearfix">
-				        			<span class="txt-400"><i class="fas fa-map-marker-alt"></i><?=$data['address']?></span> 
+				        		    <i class="fa fa-phone"></i><a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?></a>
+						    	<i class="fa fa-phone"></i><a href="tel:+<?=$data['whatsapp']?>" class="callusbtn b-right txt-400"><?=$data['whatsapp']?></a>
+						    	<i class="fa fa-envelope"></i><a href="mailto:<?=$data['email']?>" class="txt-400"><?=$data['email']?></a>
+				        			 
 				            	</div>
 				     		</div>
-
-				     		<!-- Contacts -->
-						    <div class="headertopright header-contacts">						    	
-						    	<a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?><i class="fas fa-phone"></i></a>
-						    	<a href="tel:+<?=$data['phone']?>" class="callusbtn b-right txt-400"><?=$data['phone']?><i class="fas fa-phone"></i></a>
-						    	<a href="mailto:<?=$data['email']?>" class="txt-400"><i class="far fa-envelope-open"></i><?=$data['email']?></a>
+						    <div class="headertopright header-contacts">			<span class="txt-400"><i class="fa fa-map-marker"></i> <?=$data['address']?></span>
+						    	Code: <?=$code?>
 					      	</div>
+					      	</div>
+					      
+
 
 					    </div>
-				  	</div>  
-  <!-- ======= Header ======= -->
+				  	</div>
   <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-
-      <h1 class="logo mr-auto"><a href="index.php"><?=$data['center_name']?></a><strong><?=$data['center_name2']?></strong></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid"></a>
-
+    <div class="container align-items-center">
+		     <div class="mylogo">
+      <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid1"></a>
+				    	    </div>
+		    <div id="site-branding">
+		        <div id="site-detail">				<h1 id="site-title"> 				<a href="index.php" title="<?=$data['center_name']?>" rel="home"><?=$data['center_name']?></a>
+								</h1>  <!-- end .site-title -->
+									<div id="site-description"><?=$data['center_name2']?> </div> <!-- end #site-description -->
+		</div></div>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="courses.php">Courses</a></li>
-          <li><a href="trainers.php">Trainers</a></li>
-          <li><a href="events.php">Events</a></li>
-          <li><a href="gallery.php">Gallery</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li <?php if(basename($url) == 'index.php') { echo 'class="active"';}?>><a href="index.php">Home</a></li>
+          <li <?php if(basename($url) == 'about.php') { echo 'class="active"';}?>><a href="about.php">About</a></li>
+          <li <?php if(basename($url) == 'courses.php') { echo 'class="active"';}?>><a href="courses.php">Courses</a></li>
+          <li <?php if(basename($url) == 'trainers.php') { echo 'class="active"';}?>><a href="trainers.php">Trainers</a></li>
+          <li <?php if(basename($url) == 'events.php') { echo 'class="active"';}?>><a href="events.php">Events</a></li>
+          <li <?php if(basename($url) == 'gallery.php') { echo 'class="active"';}?>><a href="gallery.php">Gallery</a></li>
+          <li <?php if(basename($url) == 'contact.php') { echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
           <li class="drop-down"><a href="">Usefull Links</a>
             <ul>
               <li><a href="https://emaxindia.in/exampanel/student/index.php" target="_blank">Student Login</a></li>
@@ -47,10 +52,10 @@
               <li><a href="https://emaxindia.in/exampanel/student/confirmwebinar.php" target="_blank">Webinar Verify</a></li>
             </ul>
           </li>
+          <li><a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>=" class="get-started-btn" target="_blank">Online Admission</a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
-      <a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>=" class="get-started-btn" target="_blank">Online Admission</a>
-
+      
     </div>
   </header><!-- End Header -->

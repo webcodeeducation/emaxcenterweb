@@ -5,6 +5,7 @@ include 'inc/status.php';
 
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$mcount = mysqli_num_rows($result);
 $data = mysqli_fetch_assoc($result);
 $center_name = $data['center_name'];
 $top_txt = $data['contact_main_top_txt'];
@@ -67,7 +68,12 @@ $code = $data7['branchcode'];
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div data-aos="fade-up">
-        <?=$map?>        
+          <?php if($mcount > 0){ ?>
+        <?=$map?>
+        <?php } else {?>
+        
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        <?php } ?>
       </div>
 
       <div class="container" data-aos="fade-up">
@@ -150,14 +156,6 @@ $code = $data7['branchcode'];
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-88401913-1');
-</script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 <?php
 include 'secret.php';
 include '../connection/config.php';
+include 'inc/status.php';
 
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$mcount = mysqli_num_rows($result);
 $data = mysqli_fetch_assoc($result);
 
 $new_sql = 'select * from center where c_id='. CENTERID;
@@ -111,21 +113,16 @@ $code = $cdata['branchcode'];
           <?php
 $sql = 'select * from center_webiste_gallery where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$gcount = mysqli_num_rows($result);
+if($gcount > 0){
 while($row=mysqli_fetch_assoc($result)){
 ?>
 <img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" />
-          <!--div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="">
-              <div class="member-content">
-                <h4><?=$row['name']?></h4>
-                <span><?=$row['title']?></span>
-                <p>
-                  <?=$row['detaiils']?>
-                </p>
-              </div>
-            </div>
-          </div-->
+          <?php } } else { ?>
+          <img src="assets/img/course-1.jpg" alt="" />
+          <img src="assets/img/course-1.jpg" alt="" />
+          <img src="assets/img/course-1.jpg" alt="" />
+          <img src="assets/img/course-1.jpg" alt="" />
           <?php } ?>
 </div>
 </div>

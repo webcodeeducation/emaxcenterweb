@@ -1,9 +1,11 @@
 <?php
 include 'secret.php';
 include '../connection/config.php';
+include 'inc/status.php';
 
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$mcount = mysqli_num_rows($result);
 $data = mysqli_fetch_assoc($result);
 $address = $data['address'];
 $top_txt = $data['event_top_text'];
@@ -70,6 +72,8 @@ $code = $cdata['branchcode'];
           <?php
             $event_sql = 'select * from center_webiste_events where isactive=1 && cid='. CENTERID;
             $result_new = mysqli_query($conn, $event_sql);
+            $count = mysqli_num_rows($result_new);
+            if($count > 0){
             while($row = mysqli_fetch_assoc($result_new)){
           ?>
           <div class="col-md-6 d-flex align-items-stretch">
@@ -83,6 +87,32 @@ $code = $cdata['branchcode'];
                 <p class="card-text"><?=$row['details']?></p>
               </div>
             </div>
+          </div>
+          <?php } } else{ ?>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/events-1.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
+                <p class="font-italic text-center">Sunday, September 26th at 7:00 pm</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/events-2.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
+                <p class="font-italic text-center">Sunday, November 15th at 7:00 pm</p>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              </div>
+            </div>
+
           </div>
           <?php } ?>
           
@@ -108,15 +138,6 @@ $code = $cdata['branchcode'];
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-88401913-1');
-</script>
 </body>
 </html>
-</php>

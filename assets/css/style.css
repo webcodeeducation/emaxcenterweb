@@ -2080,3 +2080,6 @@ h1 strong{
     margin: 0;
     text-transform: uppercase;
 }
+#main {
+    margin-top: 43px;
+}

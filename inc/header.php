@@ -6,13 +6,25 @@ $url = $_SERVER['REQUEST_URI'];
 				    	    <div class="topbar">
 				     		<div class="headertopleft">			     			
 				        		<div class="header-info clearfix">
-				        		    <i class="fa fa-phone"></i><a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?></a>
+				        		    <?php if($mcount > 0) { ?>
+      <i class="fa fa-phone"></i><a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?></a>
 						    	<i class="fa fa-phone"></i><a href="tel:+<?=$data['whatsapp']?>" class="callusbtn b-right txt-400"><?=$data['whatsapp']?></a>
 						    	<i class="fa fa-envelope"></i><a href="mailto:<?=$data['email']?>" class="txt-400"><?=$data['email']?></a>
+      <?php } else { ?>
+      <i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn txt-400">+911234567890</a>
+						    	<i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn b-right txt-400">+911234567890</a>
+						    	<i class="fa fa-envelope"></i><a href="mailto:info@emaxindia.in" class="txt-400">info@emaxindia.in</a>
+      <?php } ?>
+				        		    
 				        			 
 				            	</div>
 				     		</div>
-						    <div class="headertopright header-contacts">			<span class="txt-400"><i class="fa fa-map-marker"></i> <?=$data['address']?></span>
+						    <div class="headertopright header-contacts">		<?php if($mcount > 0) { ?>
+      <span class="txt-400"><i class="fa fa-map-marker"></i> <?=$data['address']?></span>
+      <?php } else { ?>
+      <span class="txt-400"><i class="fa fa-map-marker"></i> Emax Education India Kurukshetra, HR (India)</span>
+      <?php } ?>	
+						    
 						    	Code: <?=$code?>
 					      	</div>
 					      	</div>
@@ -24,10 +36,19 @@ $url = $_SERVER['REQUEST_URI'];
   <header id="header" class="fixed-top">
     <div class="container align-items-center">
 		     <div class="mylogo">
+		         <?php if($mcount > 0) { ?>
       <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid1"></a>
+      <?php } else { ?>
+      <a href="index.php" class="logo mr-auto"><img src="assets/img/emaxlogo.png" alt="" class="img-fluid1"></a>
+      <?php } ?>
 				    	    </div>
 		    <div id="site-branding">
-		        <div id="site-detail">				<h1 id="site-title"> 				<a href="index.php" title="<?=$data['center_name']?>" rel="home"><?=$data['center_name']?></a>
+		        <div id="site-detail">				<h1 id="site-title"> 		<?php if($mcount > 0) { ?>
+      <a href="index.php" title="<?=$data['center_name']?>" rel="home"><?=$data['center_name']?></a>
+      <?php } else { ?>
+      <a href="index.php" title="Emax Education India" rel="home">Emax Education India</a>
+      <?php } ?>		
+		        
 								</h1>  <!-- end .site-title -->
 									<div id="site-description"><?=$data['center_name2']?> </div> <!-- end #site-description -->
 		</div></div>

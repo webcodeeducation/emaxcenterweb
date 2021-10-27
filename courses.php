@@ -168,8 +168,6 @@ $counter = $counter + 1;
         </div>
 
       </div>
-      
-      <button class="btn btn-primary btnShowElements">Show More</button>
     </section><!-- End Courses Section -->
 
   </main><!-- End #main -->

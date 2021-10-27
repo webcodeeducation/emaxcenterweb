@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Pricing - Mentor Bootstrap Template</title>
+  <meta name="robots" content="index, follow"/>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

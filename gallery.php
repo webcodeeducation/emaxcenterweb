@@ -23,7 +23,6 @@ $code = $cdata['branchcode'];
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Gallery</title>
-  <meta name="robots" content="index, follow"/>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,15 +48,18 @@ $code = $cdata['branchcode'];
 
 
 
-      <!--Popup Lightbox CSS-->
-      <link href="assets/css/popup-lightbox.css" rel="stylesheet" />
+    <!--Popup Lightbox CSS-->
+    <!--link rel="stylesheet" href="assets/css/normalize.css"-->
+	<!--link rel="stylesheet" href="assets/css/bagpakk.min.css"-->
+	<link rel="stylesheet" href="assets/css/gstyle.css">
+	<link rel="stylesheet" href="assets/css/swipebox.css">
       
       <style>
       /**{ margin: 0; padding: 0;}
       body { background-color: #fafafa; }
       .container { margin: 150px auto; max-width: 960px; text-align: center; }*/
       .img-container {
-  margin: 20px;
+/*  margin: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -85,7 +87,7 @@ $code = $cdata['branchcode'];
   transition: .3s;
  -webkit-transition: .3s;
  -moz-transition: .3s;
-}
+}*/
 </style>
 </head>
 
@@ -109,7 +111,7 @@ $code = $cdata['branchcode'];
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <!--div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="img-container">
           <?php
 $sql = 'select * from center_webiste_gallery where isactive=1 && cid='.CENTERID;
@@ -126,6 +128,48 @@ while($row=mysqli_fetch_assoc($result)){
           <img src="assets/img/course-1.jpg" alt="" />
           <?php } ?>
 </div>
+</div-->
+<div class="col-md-12">
+		<div class="wrap">
+			<ul id="box-container">
+			    <?php
+$sql = 'select * from center_webiste_gallery where isactive=1 && cid='.CENTERID;
+$result = mysqli_query($conn,$sql);
+$gcount = mysqli_num_rows($result);
+if($gcount > 0){
+while($row=mysqli_fetch_assoc($result)){
+?>
+				<li class="box">
+					<a href="assets/images/<?=$row['photo']?>" class="swipebox" title="<?=$row['title']?>" rel="gallery">
+						<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" class="mygallery">
+					</a>
+				</li>
+				<?php } } else { ?>
+				<li class="box">
+					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
+						<img src="assets/img/course-1.jpg" alt="Gallery">
+					</a>
+				</li>
+				<li class="box">
+					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
+						<img src="assets/img/course-1.jpg" alt="Gallery">
+					</a>
+				</li>
+				<li class="box">
+					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
+						<img src="assets/img/course-1.jpg" alt="Gallery">
+					</a>
+				</li>
+				<li class="box">
+					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
+						<img src="assets/img/course-1.jpg" alt="Gallery">
+					</a>
+				</li>
+          
+          <?php } ?>
+				
+			</ul>
+		</div>
 </div>
          
          
@@ -153,18 +197,32 @@ while($row=mysqli_fetch_assoc($result)){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/jquery.popup.lightbox.js"></script>
-      <script>
-         $(document).ready(function(){
+	<script src="assets/js/jquery.swipebox.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
 
-         $(".img-container").popupLightbox({
-          width: 600,
-      height: 450
-         });
+			/* Basic Gallery */
+			$( '.swipebox' ).swipebox();
+			
+			/* Video */
+			$( '.swipebox-video' ).swipebox();
 
+			/* Dynamic Gallery */
+			$( '#gallery' ).on( 'click', function( e ) {
+				e.preventDefault();
+				$.swipebox( [
+					{ href : 'demo/images/big-1.jpg', title : 'My Caption' },
+					{ href : 'demo/images/big-2.jpg', title : 'My Second Caption' }
+				] );
+			} );
 
-         });
-      </script>
+			/* Smooth scroll */
+			$( '.scroll' ).on( 'click', function () {
+				$( 'html, body' ).animate( { scrollTop: $( $( this ).attr('href') ).offset().top - 15 }, 750 ); // Go
+				return false;
+			});
+      } );
+	</script>
 </body>
 
 </php>

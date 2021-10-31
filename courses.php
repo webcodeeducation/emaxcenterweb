@@ -91,7 +91,7 @@ while($row=mysqli_fetch_assoc($result)){
 $counter = $counter + 1;
 ?>
           
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch <?php if($counter >= 6){echo 'showmore';}?>">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="course-item">
               <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="<?=$row['title']?>" width="400px">
               <div class="course-content">
@@ -168,6 +168,8 @@ $counter = $counter + 1;
         </div>
 
       </div>
+      
+      <!--button class="btn btn-primary btnShowElements">Show More</button-->
     </section><!-- End Courses Section -->
 
   </main><!-- End #main -->
@@ -188,14 +190,6 @@ $counter = $counter + 1;
   <script src="assets/js/main.js"></script>
 <script>
     $(document).ready(function () {
-    //$(".content").hide();
-    $(document).on("click", ".btnShowElements", function () {
-        //var txt = $(".content").is(':visible') ? 'Read More' : 'Read Less';
-        $(".showmore").show('fast');
-        //$(this).next('.content').slideToggle(200);
-        console.log('show courses');
-        $("#courses").find('.showmore').removeClass('showmore');
-    });
 });
 </script>
 </body>

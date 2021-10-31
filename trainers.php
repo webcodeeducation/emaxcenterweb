@@ -1,9 +1,11 @@
 <?php
 include 'secret.php';
 include '../connection/config.php';
+include 'inc/status.php';
 
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$mcount = mysqli_num_rows($result);
 $data = mysqli_fetch_assoc($result);
 
 $new_sql = 'select * from center where c_id='. CENTERID;
@@ -11,6 +13,7 @@ $result_new = mysqli_query($conn, $new_sql);
 $cdata = mysqli_fetch_assoc($result_new);
 $center_name = $cdata['centername'];
 $code = $cdata['branchcode'];
+$counter2 = 1;
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -20,9 +23,8 @@ $code = $cdata['branchcode'];
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Trainers</title>
-  <meta name="robots" content="index, follow"/>
-  <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
-  <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -43,6 +45,14 @@ $code = $cdata['branchcode'];
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+.showmore{
+    display:none !important;
+}
+.btnShowElements {
+    margin-left: 100px;
+}
+</style>
 </head>
 
 <body>
@@ -69,7 +79,10 @@ $code = $cdata['branchcode'];
           <?php
 $sql = 'select * from center_websites_trainers where isactive=1 && cid='.CENTERID;
 $result = mysqli_query($conn,$sql);
+$count = mysqli_num_rows($result);
+if($count > 0){
 while($row=mysqli_fetch_assoc($result)){
+    $counter2 = $counter2 + 1;
 ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
@@ -79,6 +92,45 @@ while($row=mysqli_fetch_assoc($result)){
                 <span><?=$row['title']?></span>
                 <p>
                   <?=$row['detaiils']?>
+                </p>
+              </div>
+            </div>
+          </div>
+          <?php } } else{ ?>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Walter White</h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Jhinson</h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
                 </p>
               </div>
             </div>
@@ -93,6 +145,7 @@ while($row=mysqli_fetch_assoc($result)){
         </div>
 
       </div>
+      <!--button class="btn btn-primary btnShowElements">Show More</button-->
     </section><!-- End Trainers Section -->
 
   </main><!-- End #main -->
@@ -111,14 +164,10 @@ while($row=mysqli_fetch_assoc($result)){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-88401913-1');
+    $(document).ready(function () {
+});
 </script>
 </body>
-</html>
+
+</php>

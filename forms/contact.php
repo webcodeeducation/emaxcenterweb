@@ -7,6 +7,7 @@ $result = mysqli_query($conn,$sql);
 $data = mysqli_fetch_assoc($result);
 $to = $data['email'];
 $from = $_POST['email'];
+$mobile = $_POST['mobile'];
 $subject = $_POST['subject'];
 $fromName = $_POST['name'];
 $comments = $_POST['message'];
@@ -26,7 +27,10 @@ $htmlContent = '
             </tr> 
             <tr style="background-color: #e0e0e0;"> 
                 <th>Email:</th><td>'.$from.'</td> 
-            </tr> 
+            </tr>
+            <tr style="background-color: #e0e0e0;"> 
+                <th>Mobile:</th><td>'.$mobile.'</td> 
+            </tr>
             <tr> 
                 <th>Subject:</th><td>'.$subject.'</td> 
             </tr>

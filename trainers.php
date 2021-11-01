@@ -23,8 +23,8 @@ $counter2 = 1;
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Trainers</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
+        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">

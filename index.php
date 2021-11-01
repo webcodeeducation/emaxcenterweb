@@ -621,4 +621,4 @@ $('.carousel-main').owlCarousel({
 
 </body>
 
-</php>
+</html>

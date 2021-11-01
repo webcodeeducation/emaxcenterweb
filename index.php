@@ -28,8 +28,8 @@ $code = $data7['branchcode'];
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title><?=$data['center_name']?></title>
   <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content="Best Education Institute  <?=$data['center_name']?>"/>
-        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -108,8 +108,10 @@ $code = $data7['branchcode'];
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
               <?php if($mcount == 0){?>
                   <img src="assets/img/about.jpg" class="img-fluid" alt="Emax India">
+                  ?>
+                  
                   <?php
-              } else { ?>
+              }else{ ?>
               <img src="assets/images/<?=$data['home_about_photo']?>" class="img-fluid" alt="<?=$data['center_name']?>">
               <?php
               } ?>
@@ -120,9 +122,19 @@ $code = $data7['branchcode'];
                 <?php if($mcount > 0){?>
               <?=$data['about_heading_txt']?>
               <?php } else { ?>
-              <p>TECHNICAL LEARNING CENTER Power by E-Max India, ISO Certified Institute, Demo TECHNICAL LEARNING CENTER growing steadily in teaching Computer Software, digital marketing, App Development and web development Web Designing, to students from India and abroad<br>We are thankful to everyone who has been a part of our journey.</p>
-              <h2>We Believes In Training that Makes a Difference:</h2>
-		  <p>We really care about providing training that is effective, and we will listen to what you need. Our are continually updated in line with feedback. If you choose a private training course we will ensure the training you book with us is tailored to deliver what your organisation needs.</p>
+              <p class="font-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            </p>
+              
               <?php } ?>
             </p>
            
@@ -192,7 +204,8 @@ while($rowf=mysqli_fetch_assoc($result)){
                   <?php if($mcount > 0){ ?>
                 <?=$data['about_heading_txt']?>
                 <?php } else{ ?>
-                <p>TECHNICAL LEARNING CENTER&nbsp; Power by E-Max India, ISO Certified Institute, Demo TECHNICAL LEARNING CENTER&nbsp; growing steadily in teaching Computer Software, digital marketing, App Development and web development Web Designing, to students from India and abroad<br>We are thankful to everyone who has been a part of our journey.</p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
                 <?php } ?>
               </p>
               <div class="text-center">
@@ -218,47 +231,26 @@ while($rowf=mysqli_fetch_assoc($result)){
                     <p><?=$rowh['heading_txt']?></p>
                   </div>
                 </div>
-		      <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>Networking</h4>
-                    <p>This is about how computer acquire join with each other and how data is transferred from one computer to another computer. It is very much essential to keep data secure and protected so all basic safety events are made clear.</p>
-                  </div>
-                </div>
-		      <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4>QUALITY EDUCATION:</h4>
-                    <p>Demo Computer Center gives great importance to providing high-quality education to students. By joining a career course with Demo Computer Center, you get: Job fairs, campus placement drives, &amp; Job Info in student ID etc. conducted regularly for students to get job placements on successful course completion.</p>
-                  </div>
-                </div>
-		      <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <h4> Software</h4>
-                    <p>Certificate Computer courses: Candidates can pursue certificate Computer courses, duration of which ranges from one to six months. Some of the popular Course: DCA ADCA, Tally Account, ADFA Many More</p>
-                  </div>
-                </div>
                 <?php } } else{ ?>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Hardware</h4>
-                    <p>Information of hardware gives a deeper border of computer mechanism and peripheral devices.In this course ware study of hardware &amp; computer and linked devices.</p>
+                    <h4>Corporis voluptates sit</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Programming with C & C++</h4>
-                    <p>Information of hardware gives a deeper border of computer mechanism and peripheral devices.In this course ware study of hardware &amp; computer and linked devices.</p>
+                    <h4>Ullamco laboris ladore pan</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>NTT(Nursery Teacher Training)</h4>
-                    <p>Diploma in Nursery Teacher Training, or short form for NTT is a 1 year diploma course. The main focus of the program is to cater to the training of the nursery (pre-primary) level teacher workforce in India.</p>
+                    <h4>Labore consequatur</h4>
+                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                   </div>
                 </div>
                 <?php } ?>
@@ -289,7 +281,6 @@ while($rowf=mysqli_fetch_assoc($result)){
 				<div><img src="../../exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px">
 				</div>
 				<?php } } } else{ ?>
-				<div><img src="assets/students/3608320.jpg?text=1"></div>
 				<div><img src="assets/students/photo_1.jpg?text=1"></div>
 				<div><img src="assets/students/photo_2.jpg?text=1"></div>
 				<div><img src="assets/students/photo_3.jpg?text=1"></div>

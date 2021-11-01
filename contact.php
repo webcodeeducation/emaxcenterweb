@@ -24,11 +24,11 @@ $code = $data7['branchcode'];
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title><?=$center_name?></title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -163,5 +163,3 @@ $code = $data7['branchcode'];
 
 </body>
 </html>
-
-</php>

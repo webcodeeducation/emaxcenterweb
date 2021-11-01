@@ -120,19 +120,9 @@ $code = $data7['branchcode'];
                 <?php if($mcount > 0){?>
               <?=$data['about_heading_txt']?>
               <?php } else { ?>
-              <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
-              
+              <p>TECHNICAL LEARNING CENTER Power by E-Max India, ISO Certified Institute, Demo TECHNICAL LEARNING CENTER growing steadily in teaching Computer Software, digital marketing, App Development and web development Web Designing, to students from India and abroad<br>We are thankful to everyone who has been a part of our journey.</p>
+              <h2>We Believes In Training that Makes a Difference:</h2>
+		  <p>We really care about providing training that is effective, and we will listen to what you need. Our are continually updated in line with feedback. If you choose a private training course we will ensure the training you book with us is tailored to deliver what your organisation needs.</p>
               <?php } ?>
             </p>
            

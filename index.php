@@ -279,6 +279,7 @@ while($rowf=mysqli_fetch_assoc($result)){
 				<div><img src="../../exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px">
 				</div>
 				<?php } } } else{ ?>
+				<div><img src="assets/students/3608320.jpg?text=1"></div>
 				<div><img src="assets/students/photo_1.jpg?text=1"></div>
 				<div><img src="assets/students/photo_2.jpg?text=1"></div>
 				<div><img src="assets/students/photo_3.jpg?text=1"></div>

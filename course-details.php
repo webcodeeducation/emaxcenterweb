@@ -30,7 +30,7 @@ $course_data = mysqli_fetch_assoc($resultc);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-  <title>About - <?=$data['center_name']?></title>
+  <title>Course Details Page - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
         <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>

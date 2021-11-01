@@ -1,6 +1,14 @@
+<?php
+include 'secret.php';
+include '../connection/config.php';
+
+$sql = 'select * from center_websites where center_id='. CENTERID;
+$result = mysqli_query($conn,$sql);
+$data = mysqli_fetch_assoc($result);
+?>
+<!Doctype html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
@@ -219,5 +227,6 @@ The rotateX/Y reversal is easy since it's not animated, so just use its opposite
 </div>
 <div class="txt3">For more information please </div>
 <a href="https://www.emaxindia.in/contact-us/"><div class="button">Contact to adminstrator</div></a>
+<marquee bgcolor="#0070bb" style="color: #FFFFFF; font-family: Book Antiqua" behavior="scroll" ><?=$data['suspended_reason']?></marquee>
 </body>
 </html>

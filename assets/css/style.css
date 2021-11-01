@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .mylogo {
     position: absolute !important;
     left: 10px !important;
-    top: 43px !important;
+    top: 0px !important;
 }
 #header .logo a {
     display: none;
@@ -538,11 +538,11 @@ marquee#bottom{
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 98vh;
+  /*height: 98vh;*/
   /*background: url("../img/hero-bg.jpg") top center;*/
   background-size: cover;
   position: relative;
-  /*margin-top: 52px;*/
+  margin-top: 52px;
 }
 
 #hero:before {
@@ -861,7 +861,7 @@ section {
   font-size: 26px;
 }
 section#about{
-    /*margin-top: -141px;*/
+    margin-top: 18px;
 }
 section.aboutp{
     margin-top: -50px !important;
@@ -1435,9 +1435,9 @@ img.img-fluid1 {
     margin: 0;
     text-transform: uppercase;
 }
-section#about {
+/*section#about {
     margin-top: -55px;
-}
+}*/
 
 }
 
@@ -1969,7 +1969,7 @@ section#about {
   text-decoration: none;
 }
 .container h2 {
-    margin-top: 45px;
+    /*margin-top: 45px;*/
 }
 h1 strong{
     display: block;
@@ -2080,6 +2080,6 @@ h1 strong{
     margin: 0;
     text-transform: uppercase;
 }
-#main {
+/*#main {
     margin-top: 43px;
-}
+}*/

@@ -192,8 +192,7 @@ while($rowf=mysqli_fetch_assoc($result)){
                   <?php if($mcount > 0){ ?>
                 <?=$data['about_heading_txt']?>
                 <?php } else{ ?>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                <p>TECHNICAL LEARNING CENTER&nbsp; Power by E-Max India, ISO Certified Institute, Demo TECHNICAL LEARNING CENTER&nbsp; growing steadily in teaching Computer Software, digital marketing, App Development and web development Web Designing, to students from India and abroad<br>We are thankful to everyone who has been a part of our journey.</p>
                 <?php } ?>
               </p>
               <div class="text-center">
@@ -223,22 +222,22 @@ while($rowf=mysqli_fetch_assoc($result)){
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4>Hardware</h4>
+                    <p>Information of hardware gives a deeper border of computer mechanism and peripheral devices.In this course ware study of hardware &amp; computer and linked devices.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4>Programming with C & C++</h4>
+                    <p>Information of hardware gives a deeper border of computer mechanism and peripheral devices.In this course ware study of hardware &amp; computer and linked devices.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4>NTT(Nursery Teacher Training)</h4>
+                    <p>Diploma in Nursery Teacher Training, or short form for NTT is a 1 year diploma course. The main focus of the program is to cater to the training of the nursery (pre-primary) level teacher workforce in India.</p>
                   </div>
                 </div>
                 <?php } ?>

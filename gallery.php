@@ -20,11 +20,11 @@ $code = $cdata['branchcode'];
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Gallery</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -141,7 +141,7 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
 				<li class="box">
 					<a href="assets/images/<?=$row['photo']?>" class="swipebox" title="<?=$row['title']?>" rel="gallery">
-						<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" class="mygallery">
+						<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" class="img-rounded mygallery">
 					</a>
 				</li>
 				<?php } } else { ?>
@@ -225,4 +225,4 @@ while($row=mysqli_fetch_assoc($result)){
 	</script>
 </body>
 
-</php>
+</html>

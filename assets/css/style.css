@@ -245,10 +245,10 @@ i.fa.fa-phone,i.fa.fa-envelope {
     margin: 5px;
 }
 #header .logo img {
-min-height: 86px;
+    min-height: 86px;
     position: absolute !important;
     left: 28px !important;
-    top: 65px !important;
+    top: 66px !important;
 }
 img.img-fluid1 {
 position: relative;
@@ -428,18 +428,18 @@ marquee#bottom{
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
-  position: fixed;
-  top: 17px;
-  right: 15px;
-  z-index: 9998;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  transition: all 0.4s;
-  outline: none !important;
-  line-height: 1;
-  cursor: pointer;
-  text-align: right;
+position: fixed;
+    top: 25px;
+    right: 62px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
 }
 
 .mobile-nav-toggle i {

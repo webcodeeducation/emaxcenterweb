@@ -22,7 +22,7 @@ $code = $data7['branchcode'];
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
@@ -64,15 +64,15 @@ $code = $data7['branchcode'];
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about aboutp">
-      <div class="container" data-aos="fade-up">
+    <section id="about" class="about aboutp" style="margin-top: 16px !important;">
+      <div class="container">
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+          <div class="col-lg-6 order-1 order-lg-2">
               <?php if($mcount > 0){ ?>
             <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid aboutimg" alt="">
             <?php } else {?>
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="About us">
             <?php } ?>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -277,4 +277,4 @@ while($row=mysqli_fetch_assoc($result)){
 
 </body>
 
-</php>
+</html>

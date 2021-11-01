@@ -20,7 +20,7 @@ $counter2 = 1;
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Trainers</title>
   <meta content="" name="description">
@@ -99,42 +99,114 @@ while($row=mysqli_fetch_assoc($result)){
           <?php } } else{ ?>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <img src="assets/trainers/8365761961441378703.jpg" width="200px" height="200px" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Walter White</h4>
-                <span>Web Development</span>
+                <h4>demo 7</h4>
+                <span>B Come</span>
                 <p>
-                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-                </p>
+                                  </p>
               </div>
             </div>
           </div>
-
+          
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <img src="assets/trainers/14672237121646468654.jpg" width="200px" height="200px" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>Sarah Jhinson</h4>
-                <span>Marketing</span>
+                <h4>demo 3</h4>
+                <span>demo 3333</span>
                 <p>
-                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                </p>
+                                  </p>
               </div>
             </div>
           </div>
-
+          
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <img src="assets/trainers/9497390311150736123.jpg" width="200px" height="200px" class="img-fluid" alt="">
               <div class="member-content">
-                <h4>William Anderson</h4>
-                <span>Content</span>
+                <h4>demo 5</h4>
+                <span>demo 555</span>
                 <p>
-                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                </p>
+                                  </p>
               </div>
             </div>
           </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/4053300451718803519.jpeg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>demo 6</h4>
+                <span>demo 666</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/11358540531181603485.jpg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>demo 9</h4>
+                <span>demo 999</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/18110979672051537.jpg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>demo 6</h4>
+                <span>demo 666</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/5630164891923551937.jpg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Arti Rana</h4>
+                <span>B Come + ADCA</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/5630164891923551937.jpg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Arti Rana</h4>
+                <span>B Come + ADCA</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/trainers/18110979672051537.jpg" width="200px" height="200px" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>demo 6</h4>
+                <span>demo 666</span>
+                <p>
+                                  </p>
+              </div>
+            </div>
+          </div>
+          
+
+          
           <?php } ?>
 
          

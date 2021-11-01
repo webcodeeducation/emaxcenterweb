@@ -26,8 +26,8 @@ $code = $data7['branchcode'];
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
-<meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
-        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -64,15 +64,15 @@ $code = $data7['branchcode'];
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about aboutp" style="margin-top: 16px !important;">
-      <div class="container">
+    <section id="about" class="about aboutp">
+      <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
               <?php if($mcount > 0){ ?>
             <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid aboutimg" alt="">
             <?php } else {?>
-            <img src="assets/img/about.jpg" class="img-fluid" alt="About us">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
             <?php } ?>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -80,10 +80,18 @@ $code = $data7['branchcode'];
                 <?php if($mcount > 0){ ?>
               <?=$data['about_data_main']?>
               <?php } else {?>
-              <p><strong>We help you explore your potential:</strong></p>
-              <h3>Skilled Faculty: Here at <strong>DEMO COMPUTER&nbsp;CENTER</strong> , Training is imparted by highly qualified, experienced &amp; dedicated faculty, who are loved by their students.</h3>
-            <p>Well Equipped Labs: We have modern state-of-the-art, computer labs comprising hardware configuration powered by latest Processors which are all connected to a network.</p>
-            <p>Certification: We offer Duly Accredited and Globally Recognized Certification that works in both the private as well as the Government sector.</p>
+              <p class="font-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            </p>
               <?php } ?>
             </p>
           </div>
@@ -172,11 +180,11 @@ while($row=mysqli_fetch_assoc($result)){
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Anita</h3>
-              <h4>Job in Demo Company</h4>
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                <p>I loved the style of teaching of ATC TECHNICAL LEARNING CENTER . I Studied DCA &amp; Java hare &amp; Recommend this institute to everyone who wants to lean Computer Course</p>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -185,11 +193,24 @@ while($row=mysqli_fetch_assoc($result)){
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Taniya</h3>
-              <h4>Job in Demo Company</h4>
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                <p>The Teaching Style is extremely appreciated and the Online id is Very good in Digital Life</p>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -198,11 +219,11 @@ while($row=mysqli_fetch_assoc($result)){
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Somya Gupta</h3>
-              <h4>Job in Demo Company</h4>
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                <p>I loved the style of teaching of ATC TECHNICAL LEARNING CENTER . I Studied DCA &amp; Java hare &amp; Recommend this institute to everyone who wants to lean Computer Course.</p>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
@@ -211,23 +232,11 @@ while($row=mysqli_fetch_assoc($result)){
           <div class="testimonial-wrap">
             <div class="testimonial-item">
               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>Nancy</h3>
-              <h4>Job in Demo Company</h4>
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                <p>I loved the style of teaching of ATC TECHNICAL LEARNING CENTER . I Studied DCA &amp; Java hare &amp; Recommend this institute to everyone who wants to lean Computer Course.</p>
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>Anita</h3>
-              <h4>Job in Demo Company</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Way of teaching is good and interactive. Doubts are cleared very efficiently &amp; Methods taught are easy to Learn.
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>

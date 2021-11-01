@@ -198,7 +198,7 @@ while($rowf=mysqli_fetch_assoc($result)){
                 <?php if($mcount > 0){ ?>
               <h3>Why Choose <?=$data['center_name']?>?</h3>
               <?php } else { ?>
-              <h3>Why Choose Mentor?</h3>
+              <h3>Why Choose Emax?</h3>
               <?php } ?>
               <p>
                   <?php if($mcount > 0){ ?>

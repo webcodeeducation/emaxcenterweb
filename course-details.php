@@ -20,20 +20,18 @@ $id = $_GET['id'];
 $sqlc = 'select * from center_websites_courses where id='.$id;
 $resultc = mysqli_query($conn, $sqlc);
 $course_data = mysqli_fetch_assoc($resultc);
-//print_r($course_data);
-//die();
 ?>
 <!DOCTYPE php>
 <php lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-  <title>Course Details Page - <?=$data['center_name']?></title>
+  <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
-<meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
-        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -106,15 +104,7 @@ $course_data = mysqli_fetch_assoc($resultc);
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-88401913-1');
-</script>
 </body>
 
 </html>

@@ -97,7 +97,7 @@ $code = $data7['branchcode'];
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
           <h2>About</h2>

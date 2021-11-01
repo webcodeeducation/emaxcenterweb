@@ -218,6 +218,27 @@ while($rowf=mysqli_fetch_assoc($result)){
                     <p><?=$rowh['heading_txt']?></p>
                   </div>
                 </div>
+		      <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Networking</h4>
+                    <p>This is about how computer acquire join with each other and how data is transferred from one computer to another computer. It is very much essential to keep data secure and protected so all basic safety events are made clear.</p>
+                  </div>
+                </div>
+		      <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>QUALITY EDUCATION:</h4>
+                    <p>Demo Computer Center gives great importance to providing high-quality education to students. By joining a career course with Demo Computer Center, you get: Job fairs, campus placement drives, &amp; Job Info in student ID etc. conducted regularly for students to get job placements on successful course completion.</p>
+                  </div>
+                </div>
+		      <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4> Software</h4>
+                    <p>Certificate Computer courses: Candidates can pursue certificate Computer courses, duration of which ranges from one to six months. Some of the popular Course: DCA ADCA, Tally Account, ADFA Many More</p>
+                  </div>
+                </div>
                 <?php } } else{ ?>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">

@@ -1,6 +1,7 @@
 <?php
 include 'secret.php';
 include '../connection/config.php';
+include 'inc/status.php';
 
 $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
@@ -21,12 +22,12 @@ $code = $data7['branchcode'];
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
-<meta name="keywords" content="Best Education Institute in <?=$data['center_name']?>"/>
-        <meta name="description" content="Top Institute in India <?=$data['center_name']?>"/>
+<meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
+        <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -97,15 +98,7 @@ $code = $data7['branchcode'];
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88401913-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-88401913-1');
-</script>
 </body>
 
 </html>

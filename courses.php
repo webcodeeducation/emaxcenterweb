@@ -20,7 +20,7 @@ $counter = 1;
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Courses - <?=$data['center_name']?></title>
 <meta name="robots" content="index, follow"/>

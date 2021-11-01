@@ -21,7 +21,7 @@ $code = $cdata['branchcode'];
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Events - <?=$center_name?></title>
   <meta name="robots" content="index, follow"/>
@@ -92,28 +92,57 @@ $code = $cdata['branchcode'];
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/events-1.jpg" alt="...">
+                <img src="assets/images/17150499991254319139.jpg" alt="            PDP Class                ">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
-                <p class="font-italic text-center">Sunday, September 26th at 7:00 pm</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <h5 class="card-title"><a href="">            PDP Class                </a></h5>
+                <p class="font-italic text-center">            15  Nov 2021        </p>
+                <p class="card-text">            </p><p>What are personality development classes and how are they helpful?</p><p>1. To overcome fear<br>2. To increase your concentration<br>3. To explore yourself in various fields<br>4. To express your thoughts and behavior in public<br>5. To achieve your goals<br>6. To become smarter<br>7. Guide you in the preparation of Job perspective</p>                <p></p>
               </div>
             </div>
           </div>
+          
           <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/events-2.jpg" alt="...">
+                <img src="assets/images/1835036817828971036.jpg" alt="            Live Class 123               ">
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
-                <p class="font-italic text-center">Sunday, November 15th at 7:00 pm</p>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                <h5 class="card-title"><a href="">            Live Class 123               </a></h5>
+                <p class="font-italic text-center">            Every Sunday 9 AM123                </p>
+                <p class="card-text">            </p><h4>Benefits Of Live Classes</h4><ul>	<li>Live and interactive classes</li>	<li>Personal attention and focus</li>	<li>One on one coaching</li>	<li>Recording of classes</li>	<li>Global benchmarking</li>	<li>Time-saving and economical</li>	<li>Proper mentoring and&nbsp;feedback</li>	<li>Quality course material</li>	<li>Doubt solving</li>	<li>Parent’s interaction</li></ul><h4>What Is Live Tutoring?</h4><p>It is a two-way interaction between a student and tutor. With an improvement in technology, students can now study at home accessing varied courses and the best teachers from across the globe. We provide a platform that uses an interactive whiteboard and other great features. It's a combination of a video call and a classroom atmosphere - it's a virtual classroom.123</p>         <p></p>
               </div>
             </div>
-
           </div>
+          
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/2628458341223856212.jpg" alt="Online Exam">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Online Exam</a></h5>
+                <p class="font-italic text-center">05 Nov 2022</p>
+                <p class="card-text"></p><p>Live Exam Roll Number&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>EMC564151: 9 AM</p>
+
+<p>EMC564152:&nbsp;9 AM</p>
+
+<p>EMC564151:9 AM</p>
+
+<p>EMC564153: 9 AM</p>
+
+<p>EMC564154:&nbsp;9 AM</p>
+
+<p>EMC564155:&nbsp;9 AM</p>
+
+<p>EMC564156:&nbsp;9 AM</p>
+<p></p>
+              </div>
+            </div>
+          </div>
+         
           <?php } ?>
           
           

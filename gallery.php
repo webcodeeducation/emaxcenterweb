@@ -23,6 +23,7 @@ $code = $cdata['branchcode'];
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title>Gallery</title>
+   <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
         <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
@@ -55,39 +56,7 @@ $code = $cdata['branchcode'];
 	<link rel="stylesheet" href="assets/css/swipebox.css">
       
       <style>
-      /**{ margin: 0; padding: 0;}
-      body { background-color: #fafafa; }
-      .container { margin: 150px auto; max-width: 960px; text-align: center; }*/
-      .img-container {
-/*  margin: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.img-container img {
-   width: 250px;
-   height: 250px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   cursor: pointer;
-   -webkit-tap-highlight-color: transparent;
-   transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-
-}
-.img-container img:hover{
-  transform: scale(0.97);
- -webkit-transform: scale(0.97);
- -moz-transform: scale(0.97);
- -o-transform: scale(0.97);
-  opacity: 0.75;
- -webkit-opacity: 0.75;
- -moz-opacity: 0.75;
-  transition: .3s;
- -webkit-transition: .3s;
- -moz-transition: .3s;
-}*/
+    
 </style>
 </head>
 
@@ -141,28 +110,58 @@ while($row=mysqli_fetch_assoc($result)){
 ?>
 				<li class="box">
 					<a href="assets/images/<?=$row['photo']?>" class="swipebox" title="<?=$row['title']?>" rel="gallery">
-						<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" class="img-rounded mygallery">
+						<img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>" class="mygallery">
 					</a>
 				</li>
 				<?php } } else { ?>
 				<li class="box">
-					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
-						<img src="assets/img/course-1.jpg" alt="Gallery">
+					<a href="assets/images/16632916021452709041.jpeg" class="swipebox" title="certificate distribution" rel="gallery">
+						<img src="assets/images/16632916021452709041.jpeg" alt="certificate distribution" class="img-rounded mygallery">
 					</a>
 				</li>
-				<li class="box">
-					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
-						<img src="assets/img/course-1.jpg" alt="Gallery">
+								<li class="box">
+					<a href="assets/images/11265455071531163097.jpeg" class="swipebox" title="Office Photo" rel="gallery">
+						<img src="assets/images/11265455071531163097.jpeg" alt="Office Photo" class="img-rounded mygallery">
 					</a>
 				</li>
-				<li class="box">
-					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
-						<img src="assets/img/course-1.jpg" alt="Gallery">
+								<li class="box">
+					<a href="assets/images/7084170211974315510.jpg" class="swipebox" title="Student " rel="gallery">
+						<img src="assets/images/7084170211974315510.jpg" alt="Student " class="img-rounded mygallery">
 					</a>
 				</li>
-				<li class="box">
-					<a href="assets/img/course-1.jpg" class="swipebox" title="Institute Gallery" rel="gallery">
-						<img src="assets/img/course-1.jpg" alt="Gallery">
+								<li class="box">
+					<a href="assets/images/1517071253904835003.jpeg" class="swipebox" title="Calibration " rel="gallery">
+						<img src="assets/images/1517071253904835003.jpeg" alt="Calibration " class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/1475024423288341729.jpeg" class="swipebox" title="Certificate Distribute program " rel="gallery">
+						<img src="assets/images/1475024423288341729.jpeg" alt="Certificate Distribute program " class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/17692136161992254575.jpeg" class="swipebox" title="Certificate Distribute program " rel="gallery">
+						<img src="assets/images/17692136161992254575.jpeg" alt="Certificate Distribute program " class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/3304432862001379262.jpeg" class="swipebox" title="Branch Photo" rel="gallery">
+						<img src="assets/images/3304432862001379262.jpeg" alt="Branch Photo" class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/9009285081400624625.jpeg" class="swipebox" title="" rel="gallery">
+						<img src="assets/images/9009285081400624625.jpeg" alt="" class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/2668059001501996217.jpeg" class="swipebox" title="" rel="gallery">
+						<img src="assets/images/2668059001501996217.jpeg" alt="" class="img-rounded mygallery">
+					</a>
+				</li>
+								<li class="box">
+					<a href="assets/images/14508334201289174567.jpeg" class="swipebox" title="" rel="gallery">
+						<img src="assets/images/14508334201289174567.jpeg" alt="" class="img-rounded mygallery">
 					</a>
 				</li>
           

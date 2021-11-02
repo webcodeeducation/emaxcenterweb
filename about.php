@@ -17,8 +17,8 @@ $result7 = mysqli_query($conn, $sql);
 $data7 = mysqli_fetch_assoc($result7);
 $code = $data7['branchcode'];
 ?>
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">

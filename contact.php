@@ -27,6 +27,7 @@ $code = $data7['branchcode'];
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
   <title><?=$center_name?></title>
+   <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
         <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 

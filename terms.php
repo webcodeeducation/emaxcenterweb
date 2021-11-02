@@ -16,17 +16,25 @@ $result7 = mysqli_query($conn, $sql);
 $data7 = mysqli_fetch_assoc($result7);
 $code = $data7['branchcode'];
 ?>
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-  <title>About - <?=$data['center_name']?></title>
+<?php if($mcount > 0){ ?>
+  <title><?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
         <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
+        <?php } else { ?>
+        <title>Demo Computer Training Institute</title>
+           <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="computer center near meComputer Training InComputer Center in NTT Center in Best Computer Center in No.1 Computer Center ingovt computer center near mefree govt computer institute near mebest computer center near mecomputer center near me open nowcomputer institute near me for tallyComputer Center list near mecomputer centre near my locationcomputer institute near me for tallybest computer center near meTyping Center Near meADCA DCA Tally Course Near meNTT Course Near MeYoga Course Near meNo.1 Computer Center Near meNo.1 computer center in Computer Training Institutes in Computer Center Latest ReviewsInstitute in E-Max BranchEmax Computer Near meE-Max computer center in no 1 computer"/>
+        <meta name="description" content="Demo Computer Center computer center near meComputer Training InComputer Center in NTT Center in Best Computer Center in No.1 Computer Center ingovt computer center near mefree govt computer institute near mebest computer center near mecomputer center near me open nowcomputer institute near me for tallyComputer Center list near mecomputer centre near my locationcomputer institute near me for tallybest computer center near meTyping Center Near meADCA DCA Tally Course Near meNTT Course Near MeYoga Course Near meNo.1 Computer Center Near meNo.1 computer center in Computer Training Institutes in Computer Center Latest ReviewsInstitute in E-Max BranchEmax Computer Near meE-Max computer center in no 1 computer"/>
+
+        <?php } ?>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">

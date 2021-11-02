@@ -65,7 +65,12 @@ $code = $data7['branchcode'];
 <?php include 'inc/header.php';?>
 
   <section id="hero">
+	  <?php if($mcount > 0){ ?>
       <marquee id="top"><?=$data['center_marquee_txt']?></marquee>
+	  <?php } else { ?>
+	  Demo Computer Center Power by E-Max India recognized by govt of india, AN ISO ISO 9001:2015 & ISO 29990:2010 & ISO 21001:2018 Quality Management System Certification
+
+	  <?php } ?>
   	<div class="box">
   
   <div class="slider-box" id="sb_1" data-auto-slide="true" data-speed="5000">
@@ -99,7 +104,14 @@ $code = $data7['branchcode'];
   </div>
   
 </div>
-<marquee id="bottom"><?=$data['center_marquee_txt2']?></marquee>
+	  <?php if($mcount > 0){ ?>
+<marquee id="bottom">Demo Computer Center Power by E-Max India, recognized by govt of india, AN ISO ISO 9001:2015 & ISO 29990:2010 & ISO 21001:2018 Quality Management System Certification. join now
+Education is not preparation for life
+education is life itself.
+</marquee>
+        <?php } else { ?>
+        <marquee id="bottom"><?=$data['center_marquee_txt2']?></marquee>        <?php } ?>
+
   </section>
   <main id="main">
 

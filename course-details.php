@@ -21,8 +21,8 @@ $sqlc = 'select * from center_websites_courses where id='.$id;
 $resultc = mysqli_query($conn, $sqlc);
 $course_data = mysqli_fetch_assoc($resultc);
 ?>
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">

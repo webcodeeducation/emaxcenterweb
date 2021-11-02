@@ -7,12 +7,14 @@ $sql = 'select * from center_websites_data where centerid='.CENTERID;
 $result = mysqli_query($conn,$sql);
 $mcount = mysqli_num_rows($result);
 $data = mysqli_fetch_assoc($result);
-$top_txt = $data['course_page_top_txt'];
-$sql = 'select * from center where c_id='.CENTERID;
-$result7 = mysqli_query($conn, $sql);
-$data7 = mysqli_fetch_assoc($result7);
-$code = $data7['branchcode'];
-$counter = 1;
+$address = $data['address'];
+$top_txt = $data['event_top_text'];
+
+$new_sql = 'select * from center where c_id='. CENTERID;
+$result_new = mysqli_query($conn, $new_sql);
+$cdata = mysqli_fetch_assoc($result_new);
+$center_name = $cdata['centername'];
+$code = $cdata['branchcode'];
 ?>
 <!DOCTYPE php>
 <php lang="en">
@@ -21,8 +23,8 @@ $counter = 1;
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-  <title>Courses - <?=$data['center_name']?></title>
-<meta name="robots" content="index, follow"/>
+  <title>Events - <?=$center_name?></title>
+   <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
         <meta name="description" content="<?=strip_tags($data['description_seo'])?>"/>
 
@@ -44,132 +46,110 @@ $counter = 1;
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<style>
-.showmore{
-    display:none !important;
-}
-.btnShowElements {
-    margin-left: 100px;
-}
-</style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
   <?php include 'inc/header.php'; ?>
 
-  <main id="main" data-aos="fade-in">
+  <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
+    <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2>Courses</h2>
-        <?php if($mcount > 0){?>
+        <h2>Events</h2>
         <p><?=$top_txt?></p>
-        <?php } else{ ?>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-        <?php } ?>
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" class="courses">
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
       <div class="container" data-aos="fade-up">
 
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
+        <div class="row">
           
           <?php
-$sql = 'select * from center_websites_courses where isactive=1 && cid='.CENTERID;
-
-$result = mysqli_query($conn,$sql);
-$count = mysqli_num_rows($result);
-if($count > 0){
-while($row=mysqli_fetch_assoc($result)){
-$counter = $counter + 1;
-?>
+            $event_sql = 'select * from center_webiste_events where isactive=1 && cid='. CENTERID;
+            $result_new = mysqli_query($conn, $event_sql);
+            $count = mysqli_num_rows($result_new);
+            if($count > 0){
+            while($row = mysqli_fetch_assoc($result_new)){
+          ?>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/<?=$row['photo']?>" alt="<?=$row['title']?>">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href=""><?=$row['title']?></a></h5>
+                <p class="font-italic text-center"><?=$row['event_date']?></p>
+                <p class="card-text"><?=$row['details']?></p>
+              </div>
+            </div>
+          </div>
+          <?php } } else{ ?>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/17150499991254319139.jpg" alt="            PDP Class                ">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">            PDP Class                </a></h5>
+                <p class="font-italic text-center">            15  Nov 2021        </p>
+                <p class="card-text">            </p><p>What are personality development classes and how are they helpful?</p><p>1. To overcome fear<br>2. To increase your concentration<br>3. To explore yourself in various fields<br>4. To express your thoughts and behavior in public<br>5. To achieve your goals<br>6. To become smarter<br>7. Guide you in the preparation of Job perspective</p>                <p></p>
+              </div>
+            </div>
+          </div>
           
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="assets/images/<?=$row['photo']?>" class="img-fluid course_img" alt="<?=$row['title']?>" width="400px">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><?=$row['title']?></h4>
-                </div>
-
-                <h3><a href="course-details.php?id=<?=$row['id']?>"><?=$row['title']?></a></h3>
-                <a href="course-details.php?id=<?=$row['id']?>" class="show_hide123">Read More</a>
-                <!--div class="content"><p><?=$row['details']?></p></div-->
-                
-                
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/1835036817828971036.jpg" alt="            Live Class 123               ">
               </div>
-              
-            
-            </div>
-          </div> <!-- End Course Item-->
-        <?php  } } else { ?>
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
-                </div>
-
-                <h3><a href="course-details.php">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                
+              <div class="card-body">
+                <h5 class="card-title"><a href="">            Live Class 123               </a></h5>
+                <p class="font-italic text-center">            Every Sunday 9 AM123                </p>
+                <p class="card-text">            </p><h4>Benefits Of Live Classes</h4><ul>	<li>Live and interactive classes</li>	<li>Personal attention and focus</li>	<li>One on one coaching</li>	<li>Recording of classes</li>	<li>Global benchmarking</li>	<li>Time-saving and economical</li>	<li>Proper mentoring and&nbsp;feedback</li>	<li>Quality course material</li>	<li>Doubt solving</li>	<li>Parent’s interaction</li></ul><h4>What Is Live Tutoring?</h4><p>It is a two-way interaction between a student and tutor. With an improvement in technology, students can now study at home accessing varied courses and the best teachers from across the globe. We provide a platform that uses an interactive whiteboard and other great features. It's a combination of a video call and a classroom atmosphere - it's a virtual classroom.123</p>         <p></p>
               </div>
             </div>
-          </div> <!-- End Course Item-->
+          </div>
+          
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/images/2628458341223856212.jpg" alt="Online Exam">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Online Exam</a></h5>
+                <p class="font-italic text-center">05 Nov 2022</p>
+                <p class="card-text"></p><p>Live Exam Roll Number&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
-                </div>
+<p>EMC564151: 9 AM</p>
 
-                <h3><a href="course-details.php">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                
+<p>EMC564152:&nbsp;9 AM</p>
+
+<p>EMC564151:9 AM</p>
+
+<p>EMC564153: 9 AM</p>
+
+<p>EMC564154:&nbsp;9 AM</p>
+
+<p>EMC564155:&nbsp;9 AM</p>
+
+<p>EMC564156:&nbsp;9 AM</p>
+<p></p>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.php">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-        <?php } ?>
-        
-        
-       
+          </div>
          
-
+          <?php } ?>
           
-
+          
         </div>
 
       </div>
-      
-      <!--button class="btn btn-primary btnShowElements">Show More</button-->
-    </section><!-- End Courses Section -->
+    </section><!-- End Events Section -->
 
   </main><!-- End #main -->
 
@@ -187,10 +167,6 @@ $counter = $counter + 1;
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<script>
-    $(document).ready(function () {
-});
-</script>
-</body>
 
+</body>
 </html>

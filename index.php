@@ -86,14 +86,28 @@ $code = $data7['branchcode'];
       <h2 style="color:<?=$row['slider_data_2_color']?>"><?=$row['slider_data_2']?></h2>
       </div>
       <?php } } else {?>
-      <div class="slider-item" data-background-url="assets/images/slider2.jpg">
-        <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+                  <div class="slider-item" data-background-url="assets/images/528537054191920557.png" data-id="0">
+        <h1 style="color:#003366">Education is not preparation for life</h1>
+      <h2 style="color:#003366">education is life itself.</h2>
       </div>
-      <div class="slider-item" data-background-url="assets/images/slider3.jpg">
-        <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+            <div class="slider-item" data-background-url="assets/images/4177725111710668137.png" data-id="1">
+        <h1 style="color:#003366">An investment in knowledge </h1>
+      <h2 style="color:#003366">pays the best interest.</h2>
       </div>
+            <div class="slider-item" data-background-url="assets/images/20774034071716345679.png" data-id="2">
+        <h1 style="color:#FFFF66">Education is not preparation for life; </h1>
+      <h2 style="color:#999999">education is life itself.</h2>
+      </div>
+            <div class="slider-item active" data-background-url="assets/images/1829691214966303635.png" data-id="3">
+        <h1 style="color:#CCffCC">. Change is the end result of all true learning. </h1>
+      <h2 style="color:#993366">– Leo Buscaglia</h2>
+      </div>
+            <div class="slider-item" data-background-url="assets/images/101588849525174395.png" data-id="4">
+        <h1 style="color:">Demo Computer Center </h1>
+      <h2 style="color:">Power by E-Max India </h2>
+      </div>
+      
+
       
       <?php } ?>
 

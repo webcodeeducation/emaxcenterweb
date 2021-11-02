@@ -39,7 +39,7 @@ $url = $_SERVER['REQUEST_URI'];
 		         <?php if($mcount > 0) { ?>
       <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid1"></a>
       <?php } else { ?>
-      <a href="index.php" class="logo mr-auto"><img src="assets/img/emaxlogo.png" alt="" class="img-fluid1"></a>
+      <a href="index.php" class="logo mr-auto"><img src="assets/images/376096652927829391.jpeg" alt="" class="img-fluid1"></a>
       <?php } ?>
 				    	    </div>
 		    <div id="site-branding">

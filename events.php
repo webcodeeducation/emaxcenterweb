@@ -16,8 +16,8 @@ $cdata = mysqli_fetch_assoc($result_new);
 $center_name = $cdata['centername'];
 $code = $cdata['branchcode'];
 ?>
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">

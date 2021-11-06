@@ -24,9 +24,10 @@ $url = $_SERVER['REQUEST_URI'];
       Code: <?=$code?>
       <?php } else { ?>
       <span class="txt-400"><i class="fa fa-map-marker"></i> Demo Computer Institute, HR (India)</span>
+      Code: EMAX10001
       <?php } ?>	
 						    
-	Code: EMAX10001
+	
 					      	</div>
 					      	</div>
 					      

@@ -57,7 +57,7 @@ $code = $data7['branchcode'];
 <?php include 'inc/header.php';?>
 
   <section id="hero">
-      <?php if($mcount == 0){?>
+      <?php if($mcount > 0){?>
       <marquee id="top"><?=$data['center_marquee_txt']?></marquee>
       <?php } else { ?>
       <marquee id="top">Demo Computer Center Power by E-Max India recognized by govt of india, AN ISO ISO 9001:2015 &amp; ISO 29990:2010 &amp; ISO 21001:2018 Quality Management System Certification</marquee>
@@ -95,7 +95,7 @@ $code = $data7['branchcode'];
   </div>
   
 </div>
-<?php if($mcount == 0){?>
+<?php if($mcount > 0){?>
 <marquee id="bottom"><?=$data['center_marquee_txt2']?></marquee>
 <?php } else { ?>
 <marquee id="bottom">Demo Computer Center Power by E-Max India recognized by govt of india, AN ISO ISO 9001:2015 & ISO 29990:2010 & ISO 21001:2018 Quality Management System Certification

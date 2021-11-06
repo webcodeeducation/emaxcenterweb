@@ -25,9 +25,9 @@
               <strong>Email:</strong> <?=$data['email']?><br>
             </p>
       <?php } else { ?>
-      <h3>Emax Education India</h3>
+      <h3>Demo Computer Institute</h3>
       <p>
-              Emax Education India Kurukshetra, HR (India)<br><br>
+              Demo Computer Institute,(India)<br><br>
               <strong>Phone:</strong> +91 1234567890<br>
               <strong>Email:</strong> info@emaxindia.in<br>
             </p>

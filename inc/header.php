@@ -21,11 +21,12 @@ $url = $_SERVER['REQUEST_URI'];
 				     		</div>
 						    <div class="headertopright header-contacts">		<?php if($mcount > 0) { ?>
       <span class="txt-400"><i class="fa fa-map-marker"></i> <?=$data['address']?></span>
+      Code: <?=$code?>
       <?php } else { ?>
-      <span class="txt-400"><i class="fa fa-map-marker"></i> Emax Education India Kurukshetra, HR (India)</span>
+      <span class="txt-400"><i class="fa fa-map-marker"></i> Demo Computer Institute, HR (India)</span>
       <?php } ?>	
 						    
-						    	Code: <?=$code?>
+	Code: EMAX10001
 					      	</div>
 					      	</div>
 					      
@@ -39,14 +40,14 @@ $url = $_SERVER['REQUEST_URI'];
 		         <?php if($mcount > 0) { ?>
       <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid1"></a>
       <?php } else { ?>
-      <a href="index.php" class="logo mr-auto"><img src="assets/images/376096652927829391.jpeg" alt="" class="img-fluid1"></a>
+      <a href="index.php" class="logo mr-auto"><img src="assets/img/emaxlogo.png" alt="" class="img-fluid1"></a>
       <?php } ?>
 				    	    </div>
 		    <div id="site-branding">
 		        <div id="site-detail">				<h1 id="site-title"> 		<?php if($mcount > 0) { ?>
       <a href="index.php" title="<?=$data['center_name']?>" rel="home"><?=$data['center_name']?></a>
       <?php } else { ?>
-      <a href="index.php" title="Emax Education India" rel="home">Emax Education India</a>
+      <a href="index.php" title="Emax Education India" rel="home">Demo Computer Institute</a>
       <?php } ?>		
 		        
 								</h1>  <!-- end .site-title -->

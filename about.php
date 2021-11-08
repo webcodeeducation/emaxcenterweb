@@ -175,7 +175,7 @@ while($row=mysqli_fetch_assoc($result)){
           <?php } } else { ?>
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <img src="assets/images/49833397881499676.jpg" class="testimonial-img" alt="">
               <h3>Anita</h3>
               <h4>Job in Demo Company</h4>
               <p>
@@ -188,7 +188,7 @@ while($row=mysqli_fetch_assoc($result)){
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img src="assets/images/1892060485240050271.jpg" class="testimonial-img" alt="">
               <h3>Taniya</h3>
               <h4>Job in Demo Company</h4>
               <p>
@@ -201,7 +201,7 @@ while($row=mysqli_fetch_assoc($result)){
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <img src="assets/images/20738682471343768888.png" class="testimonial-img" alt="">
               <h3>Somya Gupta</h3>
               <h4>Job in Demo Company</h4>
               <p>
@@ -214,7 +214,7 @@ while($row=mysqli_fetch_assoc($result)){
 
           <div class="testimonial-wrap">
             <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <img src="assets/images/2131694181299622272.jpg" class="testimonial-img" alt="">
               <h3>Nancy</h3>
               <h4>Job in Demo Company</h4>
               <p>
@@ -224,28 +224,8 @@ while($row=mysqli_fetch_assoc($result)){
               </p>
             </div>
           </div>
-          <div class="testimonial-wrap">
-            <div class="testimonial-item">
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>Anita</h3>
-              <h4>Job in Demo Company</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Way of teaching is good and interactive. Doubts are cleared very efficiently &amp; Methods taught are easy to Learn.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
+          
           <?php } ?>
-
-        
-
-         
-
-          
-
-          
-
         </div>
 
       </div>

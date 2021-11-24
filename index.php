@@ -53,7 +53,7 @@ $code = $data7['branchcode'];
 <?php include 'inc/header.php';?>
 
   <section id="hero">
-      <?php if($mcount > 0){?>
+      <?php if($mcount > 0  && !empty($data['center_marquee_txt'])){?>
       <marquee id="top"><?=$data['center_marquee_txt']?></marquee>
       <?php } else { ?>
       <marquee id="top">Demo Computer Center Power by E-Max India recognized by govt of india, AN ISO ISO 9001:2015 &amp; ISO 29990:2010 &amp; ISO 21001:2018 Quality Management System Certification</marquee>
@@ -107,7 +107,7 @@ $code = $data7['branchcode'];
   </div>
   
 </div>
-<?php if($mcount > 0){?>
+<?php if($mcount > 0  && !empty($data['center_marquee_txt2'])){?>
 <marquee id="bottom"><?=$data['center_marquee_txt2']?></marquee>
 <?php } else { ?>
 <marquee id="bottom">Demo Computer Center Power by E-Max India recognized by govt of india, AN ISO ISO 9001:2015 & ISO 29990:2010 & ISO 21001:2018 Quality Management System Certification
@@ -127,18 +127,18 @@ $code = $data7['branchcode'];
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-              <?php if($mcount == 0){?>
-                  <img src="assets/images/8386285871129958540.png" class="img-fluid" alt="Emax India">
+              <?php if($mcount > 0 && !empty($data['home_about_photo'])){?>
+		  <img src="assets/images/<?=$data['home_about_photo']?>" class="img-fluid" alt="<?=$data['center_name']?>">
                   <?php
               }else{ ?>
-              <img src="assets/images/<?=$data['home_about_photo']?>" class="img-fluid" alt="<?=$data['center_name']?>">
+              <img src="assets/images/8386285871129958540.png" class="img-fluid" alt="Emax India">
               <?php
               } ?>
             
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <p class="font-italic">
-                <?php if($mcount > 0){?>
+                <?php if($mcount > 0 && !empty($data['about_heading_txt'])){?>
               <?=$data['about_heading_txt']?>
               <?php } else { ?>
               <p>TECHNICAL LEARNING CENTER&nbsp; Power by E-Max India, ISO Certified Institute, Demo TECHNICAL LEARNING CENTER&nbsp; growing steadily in teaching Computer Software, digital marketing, App Development and web development Web Designing, to students from India and abroad<br>We are thankful to everyone who has been a part of our journey.</p>
@@ -204,13 +204,13 @@ while($rowf=mysqli_fetch_assoc($result)){
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-                <?php if($mcount > 0){ ?>
+                <?php if($mcount > 0  && !empty($data['center_name'])){ ?>
               <h3>Why Choose <?=$data['center_name']?>?</h3>
               <?php } else { ?>
               <h3>Why Choose Emax?</h3>
               <?php } ?>
               <p>
-                  <?php if($mcount > 0){ ?>
+                  <?php if($mcount > 0 && !empty($data['about_data_main'])){ ?>
                 <?=$data['about_data_main']?>
                 <?php } else{ ?>
                                               

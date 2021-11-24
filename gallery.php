@@ -22,7 +22,7 @@ $code = $cdata['branchcode'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-<?php if($mcount > 0){ ?>
+<?php if($mcount > 0 && !empty($data['center_name'])){ ?>
   <title>Gallery - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
@@ -74,7 +74,11 @@ $code = $cdata['branchcode'];
     <div class="breadcrumbs">
       <div class="container">
         <h2>Gallery</h2>
+	      <?php if(!empty($data['gallery_top_txt'])){?>
         <p><?=$data['gallery_top_txt']?></p>
+	      <?php } else { ?>
+	      <p>Our Institute Gallery Developer</p>
+	      <?php } ?>
       </div>
     </div><!-- End Breadcrumbs -->
 

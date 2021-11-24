@@ -24,7 +24,7 @@ $code = $data7['branchcode'];
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-<?php if($mcount > 0){ ?>
+<?php if($mcount > 0 && !empty($data['center_name'])){?>
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
@@ -73,7 +73,7 @@ $code = $data7['branchcode'];
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2">
-              <?php if($mcount > 0){ ?>
+              <?php if($mcount > 0 && !empty($data['about_page_photo'])){ ?>
             <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid aboutimg" alt="">
             <?php } else {?>
             <img src="assets/images/57190217145075146.jpg" class="img-fluid" alt="About us">
@@ -81,7 +81,7 @@ $code = $data7['branchcode'];
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <p class="font-italic">
-                <?php if($mcount > 0){ ?>
+                <?php if($mcount > 0 && !empty($data['about_data_main'])){ ?>
               <?=$data['about_data_main']?>
               <?php } else {?>
               <p><strong>We help you explore your potential:</strong></p>

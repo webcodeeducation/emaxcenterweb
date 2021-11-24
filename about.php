@@ -76,7 +76,7 @@ $code = $data7['branchcode'];
               <?php if($mcount > 0){ ?>
             <img src="assets/images/<?=$data['about_page_photo']?>" class="img-fluid aboutimg" alt="">
             <?php } else {?>
-            <img src="assets/img/about.jpg" class="img-fluid" alt="About us">
+            <img src="assets/images/57190217145075146.jpg" class="img-fluid" alt="About us">
             <?php } ?>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">

@@ -128,7 +128,7 @@ $code = $data7['branchcode'];
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
               <?php if($mcount == 0){?>
-                  <img src="assets/img/about.jpg" class="img-fluid" alt="Emax India">
+                  <img src="assets/images/8386285871129958540.png" class="img-fluid" alt="Emax India">
                   <?php
               }else{ ?>
               <img src="assets/images/<?=$data['home_about_photo']?>" class="img-fluid" alt="<?=$data['center_name']?>">

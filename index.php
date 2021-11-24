@@ -73,11 +73,27 @@ $code = $data7['branchcode'];
       <h2 style="color:<?=$row['slider_data_2_color']?>"><?=$row['slider_data_2']?></h2>
       </div>
       <?php } } else {?>
-      <div class="slider-item" data-background-url="assets/images/slider2.jpg">
+      <div class="slider-item" data-background-url="assets/images/1829691214966303635.png">
         <h1>Learning Today,<br>Leading Tomorrow</h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
       </div>
-      <div class="slider-item" data-background-url="assets/images/slider3.jpg">
+      <div class="slider-item" data-background-url="assets/images/528537054191920557.png">
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      </div>
+	    
+	    
+	     <div class="slider-item" data-background-url="assets/images/528537054191920557.png">
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      </div>
+	    
+	     <div class="slider-item" data-background-url="assets/images/20774034071716345679.png">
+        <h1>Learning Today,<br>Leading Tomorrow</h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      </div>
+	    
+	    <div class="slider-item" data-background-url="assets/images/4177725111710668137.png">
         <h1>Learning Today,<br>Leading Tomorrow</h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
       </div>

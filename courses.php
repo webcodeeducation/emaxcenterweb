@@ -22,7 +22,7 @@ $counter = 1;
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta name="google-site-verification" content="ComQ2SdK2WR56w1Ik7Rg0EaLEzm2qPkMIlJb7hYso8c" />
-<?php if($mcount > 0){ ?>
+<?php if($mcount > 0 && !empty($data['center_name'])){ ?>
   <title>About - <?=$data['center_name']?></title>
    <meta name="robots" content="index, follow"/>
 <meta name="keywords" content="<?=strip_tags($data['keyword_seo'])?>"/>
@@ -70,7 +70,7 @@ $counter = 1;
     <div class="breadcrumbs">
       <div class="container">
         <h2>Courses</h2>
-        <?php if($mcount > 0){?>
+        <?php if($mcount > 0  && !empty($top_txt)){?>
         <p><?=$top_txt?></p>
         <?php } else{ ?>
         <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
@@ -438,26 +438,13 @@ $counter = $counter + 1;
 
                 <h3><a href="course-details.php?id=19">Java Training</a></h3>
                 <a href="course-details.php?id=19" class="show_hide123">Read More</a>
-                
-                
-                
+  
               </div>
-              
-            
+
             </div>
           </div>
-          
-          
 
-          
         <?php } ?>
-        
-        
-       
-         
-
-          
-
         </div>
 
       </div>

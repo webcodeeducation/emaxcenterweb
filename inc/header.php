@@ -5,21 +5,24 @@ $url = $_SERVER['REQUEST_URI'];
 				    	<div class="headerwp clearfix">
 				    	    <div class="topbar">
 				     		<div class="headertopleft">			     			
-				        		<div class="header-info clearfix">
-				        		    <?php if($mcount > 0) { ?>
-      <i class="fa fa-phone"></i><a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?></a>
+				        	<div class="header-info clearfix">
+				        		<?php if($mcount > 0 && !empty($data['phone'])) { ?>
+      							<i class="fa fa-phone"></i><a href="tel:<?=$data['phone']?>" class="callusbtn txt-400"><?=$data['phone']?></a>
+      							<?php } else { ?>
+						    	<i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn txt-400">+911234567890</a>
+						    		
+						    	<?php } if($mcount > 0 && !empty($data['whatsapp'])) { ?>
 						    	<i class="fa fa-phone"></i><a href="tel:+<?=$data['whatsapp']?>" class="callusbtn b-right txt-400"><?=$data['whatsapp']?></a>
-						    	<i class="fa fa-envelope"></i><a href="mailto:<?=$data['email']?>" class="txt-400"><?=$data['email']?></a>
-      <?php } else { ?>
-      <i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn txt-400">+911234567890</a>
-						    	<i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn b-right txt-400">+911234567890</a>
-						    	<i class="fa fa-envelope"></i><a href="mailto:info@emaxindia.in" class="txt-400">info@emaxindia.in</a>
-      <?php } ?>
-				        		    
-				        			 
+      							<?php } else { ?>
+      							<i class="fa fa-phone"></i><a href="tel:+911234567890" class="callusbtn txt-400">+911234567890</a>
+      						<?php } if($mcount > 0 && !empty($data['email'])) { ?>
+      							<i class="fa fa-envelope"></i><a href="mailto:<?=$data['email']?>" class="txt-400"><?=$data['email']?></a>
+      							<?php } else { ?>
+      							<i class="fa fa-envelope"></i><a href="mailto:info@emaxindia.in" class="txt-400">info@emaxindia.in</a>
+						    	<?php } ?>
 				            	</div>
 				     		</div>
-						    <div class="headertopright header-contacts">		<?php if($mcount > 0) { ?>
+						    <div class="headertopright header-contacts"><?php if($mcount > 0 && !empty($data['address'])) { ?>
       <span class="txt-400"><i class="fa fa-map-marker"></i> <?=$data['address']?></span>
       Code: <?=$code?>
       <?php } else { ?>
@@ -38,21 +41,26 @@ $url = $_SERVER['REQUEST_URI'];
   <header id="header" class="fixed-top">
     <div class="container align-items-center">
 		     <div class="mylogo">
-		         <?php if($mcount > 0) { ?>
+		         <?php if($mcount > 0 && !empty($data['center_logo'])) { ?>
       <a href="index.php" class="logo mr-auto"><img src="assets/images/<?=$data['center_logo']?>" alt="" class="img-fluid1"></a>
       <?php } else { ?>
       <a href="index.php" class="logo mr-auto"><img src="assets/img/emaxlogo.png" alt="" class="img-fluid1"></a>
       <?php } ?>
 				    	    </div>
 		    <div id="site-branding">
-		        <div id="site-detail">				<h1 id="site-title"> 		<?php if($mcount > 0) { ?>
+		        <div id="site-detail"><h1 id="site-title">
+		        <?php if($mcount > 0 && !empty($data['center_name'])) { ?>
       <a href="index.php" title="<?=$data['center_name']?>" rel="home"><?=$data['center_name']?></a>
       <?php } else { ?>
       <a href="index.php" title="Emax Education India" rel="home">Demo Computer Institute</a>
       <?php } ?>		
-		        
-								</h1>  <!-- end .site-title -->
-									<div id="site-description"><?=$data['center_name2']?> </div> <!-- end #site-description -->
+		</h1>  <!-- end .site-title -->
+		<?php if($mcount > 0 && !empty($data['center_name2'])) { ?>
+      <div id="site-description"><?=$data['center_name2']?></div> <!-- end #site-description -->
+      <?php } else { ?>
+      <div id="site-description">BEST EDUCATION BRIGHT FUTURE POWER BY E-MAX INDIA</div> <!-- end #site-description -->
+      <?php } ?>
+		
 		</div></div>
       <nav class="nav-menu d-none d-lg-block">
         <ul>

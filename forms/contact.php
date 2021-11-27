@@ -12,8 +12,6 @@ $subject = $_POST['subject'];
 $fromName = $_POST['name'];
 $comments = $_POST['message'];
 
-$subject = "Customer: Enquiry Form Mail"; 
- 
 $htmlContent = ' 
     <html> 
     <head> 

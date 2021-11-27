@@ -148,29 +148,29 @@
 $(document).on('click', '.btnSendMail', function(){
     var name = $('#name').val();
 	var email = $('#email').val();
+	var mobile = $('#mobileno').val();
 	var subject = $('#subject').val();
 	var message = $('#message').val();
-	
-	if($('#name').val() == '' || $('#name') == ' ' || $('#email').val() == '' || $('#email').val() == ' ' || $('#subject').val() == '' || $('#subject').val() == ' ' || $('#message').val() == '' || $('#message').val() == ' '){
+	if($('#name').val() == '' || $('#name') == ' ' || $('#email').val() == '' || $('#email').val() == ' ' || $('#mobile').val() == '' || $('#mobile').val() == ' ' || $('#subject').val() == ' ' || $('#message').val() == '' || $('#message').val() == ' '){
 		alert('Please fill all values');
 	}else{
 		$.ajax({
 			url: 'forms/contact.php',
 			type: 'POST',
-			data: {'name': name,'email':email,'subject':subject, 'message': message},
+			data: {'name': name,'email':email,'mobile':mobile,'subject':subject, 'message': message},
 			before: function(){
 				$('.loading').show('fast');
 			},
 			success: function(response)
 			{
 			    $('.sent-message').show('fast');
-				//console.log(response);
+				$('#contactform')[0].reset();
 			},
 			error: function(error){
 				console.log(error);
 			},
-		before: function(){
-				
+		complete: function(){
+				$('#contactform')[0].reset();
 			}
 			
 		});	

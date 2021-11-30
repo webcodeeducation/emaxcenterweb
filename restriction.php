@@ -11,9 +11,6 @@ $test101 = 'select website_status from center where c_id='.CENTERID;
 $cres = mysqli_query($conn,$test101);
 $dd_web_data = mysqli_fetch_assoc($cres);
 $ws = $dd_web_data['website_status'];
-if($ws == 1){
-    header('Location: /web/'.$data['directory_name']);
-}
 ?>
 <!Doctype html>
 <html>

@@ -313,7 +313,7 @@ while($rowf=mysqli_fetch_assoc($result)){
 			    while($row=mysqli_fetch_assoc($result_students)){
 			    if($row['studentlogo'] != ''){
 			    ?>
-				<div><img src="../../exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px">
+				<div><img src="https://www.emaxindia.in/exampanel/images/logo/studentlogo/<?=$row['studentlogo']?>" width="250px" height="250px">
 				</div>
 				<?php } } } else{ ?>
 				<div><img src="assets/students/photo_1.jpg?text=Demo"></div>

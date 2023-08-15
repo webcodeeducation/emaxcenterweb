@@ -1,5 +1,5 @@
 <?php if($mcount > 0) { ?>
-      <a href="https://api.whatsapp.com/send?phone=<?=$data['whatsapp']?>&text=Hello%21%20Team%20m%C3%A1s%20" class="whatfloat" target="_blank">
+      <a href="https://api.whatsapp.com/send?phone=<?=$data['whatsapp']?>&text=Hello%21%20Team" class="whatfloat" target="_blank">
 <i class="fa fa-whatsapp what-float"></i>
 </a>
       <?php } else { ?>

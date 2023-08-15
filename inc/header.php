@@ -1,5 +1,11 @@
 <?php
 $url = $_SERVER['REQUEST_URI'];
+$str=CENTERID;
+			$key = "admissionkey";
+			$cipher = "AES-128-CTR";
+			$iv=1234567891234567;
+			$options = 0;
+			$encrypted_id = openssl_encrypt($str,$cipher,$key,$options,$iv);
 ?>
 <div class="headtoppart bg-white clearfix">
 				    	<div class="headerwp clearfix">
@@ -83,7 +89,7 @@ $url = $_SERVER['REQUEST_URI'];
               <li><a href="https://emaxindia.in/exampanel/student/confirmwebinar.php" target="_blank">Webinar Verify</a></li>
             </ul>
           </li>
-          <li><a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>" class="get-started-btn" target="_blank">Online Admission</a></li>
+          <li><a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo $encrypted_id;?>" class="get-started-btn" target="_blank">Online Admission</a></li>
         </ul>
       </nav>
 

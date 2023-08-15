@@ -83,7 +83,7 @@ $url = $_SERVER['REQUEST_URI'];
               <li><a href="https://emaxindia.in/exampanel/student/confirmwebinar.php" target="_blank">Webinar Verify</a></li>
             </ul>
           </li>
-          <li><a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>=" class="get-started-btn" target="_blank">Online Admission</a></li>
+          <li><a href="https://emaxindia.in/exampanel/admission_form.php?cid=<?php echo base64_encode('center_'.CENTERID.'_id')?>" class="get-started-btn" target="_blank">Online Admission</a></li>
         </ul>
       </nav>
 

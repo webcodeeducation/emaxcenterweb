@@ -82,7 +82,7 @@ $course_data = mysqli_fetch_assoc($resultc);
             <img src="assets/images/<?=$course_data['photo']?>" class="img-fluid" alt="">
             <h3><?=$course_data['title']?></h3>
             <p>
-              <?=$course_data['details']?>
+              <?=htmlspecialchars_decode(stripslashes($course_data['details']));?>
             </p>
           </div>
           
